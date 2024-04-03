@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style-otentikasi.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Otentikasi</title>
+  </head>
+  <body class="register-login">
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Buat Akun</h1>
+          <input type="text" placeholder="Nama Lengkap" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Kata Sandi" required />
+          <div class="TAC">
+            <input type="checkbox" /><span>
+              Saya setuju dengan syarat dan ketentuan</span
+            >
+          </div>
+          <button type="submit" class="login-register button">Daftar</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>Masuk</h1>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Kata Sandi" required />
+          <div class="remember-forgot">
+            <label class="remember-label" for="remember-me">
+              <input type="checkbox" /> <span>Ingat Saya</span>
+            </label>
+            <a href="#" class="forgot-password">Lupa Kata Sandi?</a>
+          </div>
+          <button type="submit" class="login-register button">
+            <a href="index.html">Masuk</a>
+          </button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Sudah Memiliki Akun?</h1>
+            <p>
+              Masuk sekarang untuk mengakses profil Anda dan fitur-fitur
+              lainnya.
+            </p>
+            <button class="hidden" id="login"></button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Belum Memiliki Akun?</h1>
+            <p>
+              Daftar sekarang dan akses beragam fitur eksklusif kami dengan
+              mudah!
+            </p>
+            <button class="hidden" id="register">Daftar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/script-otentikasi.js"></script>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/detail_tour.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Details_Tournament</title>
+  </head>
+
+  <body>
+    <!-- 
+    - #HEADER
+  -->
+    <header class="header">
+      <div class="overlay" data-overlay></div>
+
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo.png"
+            alt="GASLogin logo"
+            width="110vh"
+            height="110vh"
+          />
+        </a>
+
+        <button class="nav-open-btn" data-nav-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-nav>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/logo.png"
+                alt="GASLogin logo"
+                width="110vh"
+                height="110vh"
+              />
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link">About</a>
+            </li>
+
+            <li>
+              <a href="tournament.html" class="navbar-link">Tournament</a>
+            </li>
+          </ul>
+
+          <ul class="nav-social-list">
+            <li>
+              <a href="otentikasi.html">
+                <button style="color: hsl(31, 100%, 51%)">
+                  <span>Log-in</span>
+                </button></a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+          <a href="otentikasi.html">
+            <button class="btn-sign_in">
+              <div class="icon-box">
+                <ion-icon name="log-in-outline"></ion-icon>
+              </div>
+
+              <span>Log-in</span>
+            </button></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="tour-header">
+        <div class="tour-information">
+          <h1>MLBB ALLSTARS CIBIRU</h1>
+          <h4>Organize by Zi Xuan</h4>
+          <ul>
+            <li>Day, Date</li>
+            <li>Start - End</li>
+            <li>Teams</li>
+            <li>Teams</li>
+          </ul>
+          <span class="tour-location">
+            <img
+              src="./assets/images/map-icon-white.png"
+              alt="Icon map"
+              class="map-icon"
+            />
+            <p>U-FOOD UPI CIBIRU</p>
+          </span>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="container">
+        <div class="tab-box">
+          <div class="tab-btns">
+            <button class="tab-btn active" data-target="#overview">
+              Overview
+            </button>
+            <button class="tab-btn" data-target="#bracket">Bracket</button>
+            <button class="tab-btn" data-target="#live">Live</button>
+            <button class="tab-btn" data-target="#standings">Standings</button>
+          </div>
+
+          <div class="content-box">
+            <div class="content active" id="overview">
+              <div class="overview-box">
+                <div class="box-1">
+                  <h2>Overview</h2>
+                  <div class="row">
+                    <div class="box-small">
+                      <div class="overview-icon">
+                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                      </div>
+                      <span class="desc-1">Game</span>
+                      <span class="desc-2">Mobile Legends: Bang bang</span>
+                    </div>
+                    <div class="box-small">
+                      <div class="overview-icon">
+                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                      </div>
+                      <span class="desc-1">Teams</span>
+                      <span class="desc-2">Open for 8 or 16 teams</span>
+                    </div>
+                    <div class="box-small">
+                      <div class="overview-icon">
+                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                      </div>
+                      <span class="desc-1">Prizes</span>
+                      <span class="desc-2">Prizes up to 6000 💎</span>
+                    </div>
+                    <div class="box-small">
+                      <div class="overview-icon">
+                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                      </div>
+                      <span class="desc-1">Location</span>
+                      <span class="desc-2">UPI CIBIRU (tentative)</span>
+                    </div>
+                    <div class="box-small">
+                      <div class="overview-icon">
+                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                      </div>
+                      <span class="desc-1">Requirements</span>
+                      <span class="desc-2">
+                        <ul>
+                          <li>Student of UPI CIBIRU</li>
+                          <li>Free (no fee Required)</li>
+                        </ul>
+                      </span>
+                    </div>
+                    <div class="box-small">
+                      <div class="overview-icon">
+                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                      </div>
+                      <span class="desc-1">Format</span>
+                      <span class="desc-2">Single Eliminations</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-2">
+                  <h2>Winner</h2>
+                  <div class="box-large">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Team</th>
+                          <th>Prizes</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>🥇</td>
+                          <td>FOUNDING</td>
+                          <td>600 💎</td>
+                        </tr>
+                        <tr>
+                          <td>🥈</td>
+                          <td>EPC</td>
+                          <td>500 💎</td>
+                        </tr>
+                        <tr>
+                          <td>🥉</td>
+                          <td>JAW</td>
+                          <td>300 💎</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>SHOCK</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>LAWAR</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>ROD REISS</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>EPIC CYBER</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>SHIFTER</td>
+                          <td>-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content" id="bracket">
+              <h2>Bracket</h2>
+              <img src="./assets/images/bracket.png" alt="bracket" />
+            </div>
+            <div class="content" id="live">
+              <h2>Live</h2>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="content" id="standings">
+              <h2>Standings</h2>
+              <p>Coming Soon...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            Copyright &copy; 2024 <a href="#">GASLogin</a>. all rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      document.querySelectorAll(".tab-btn").forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          // Remove active class from all tabs
+          document.querySelectorAll(".tab-btn").forEach((t) => {
+            t.classList.remove("active");
+          });
+
+          // Add active class to current tab
+          e.target.classList.add("active");
+
+          // Get content element
+          const content = document.querySelector(e.target.dataset.target);
+          console.log(content);
+
+          // Remove active class from all content
+          document.querySelectorAll(".content").forEach((c) => {
+            c.classList.remove("active");
+          });
+
+          // Add active class to current content
+          content.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

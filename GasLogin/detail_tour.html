@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/detail_tour.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <title>Details_Tournament</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>GAS LOGIN - Detail Tournament</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/fav.png"
+      type="image/svg+xml"
+    />
   </head>
 
   <body>
@@ -90,39 +100,49 @@
 
     <main>
       <div class="tour-header">
+        <div class="tour-bg"></div>
         <div class="tour-information">
-          <h1>MLBB ALLSTARS CIBIRU</h1>
+          <h1>MLBB ALLSTARS TOURNAMENT CIBIRU</h1>
           <h4>Organize by Zi Xuan</h4>
           <ul>
-            <li>Day, Date</li>
-            <li>Start - End</li>
-            <li>Teams</li>
-            <li>Teams</li>
+            <li>
+              <ion-icon name="calendar" class="icon"></ion-icon>Senin - Rabu, 1
+              - 3 April 2024
+            </li>
+            <li>
+              <ion-icon name="alarm" class="icon"></ion-icon>Jam 19:00 - 22:00
+            </li>
+            <li>
+              <ion-icon name="people-circle" class="icon"></ion-icon>8 Teams
+            </li>
+            <li><ion-icon name="pricetags" class="icon"></ion-icon>Free</li>
+            <li>
+              <ion-icon name="location-outline" class="icon"></ion-icon>
+              <a href="https://g.co/kgs/E3pj652"
+                ><p>U-Food Park UPi Cibiru</p></a
+              >
+            </li>
           </ul>
-          <span class="tour-location">
-            <img
-              src="./assets/images/map-icon-white.png"
-              alt="Icon map"
-              class="map-icon"
-            />
-            <p>U-FOOD UPI CIBIRU</p>
-          </span>
         </div>
       </div>
 
       <!-- TABS -->
-      <div class="container">
+      <div class="tab-container">
         <div class="tab-box">
           <div class="tab-btns">
             <button class="tab-btn active" data-target="#overview">
-              Overview
+              OVERVIEW
             </button>
-            <button class="tab-btn" data-target="#bracket">Bracket</button>
-            <button class="tab-btn" data-target="#live">Live</button>
-            <button class="tab-btn" data-target="#standings">Standings</button>
+
+            <button class="tab-btn" data-target="#bracket">BRACKET</button>
+
+            <button class="tab-btn" data-target="#live">LIVE</button>
+
+            <button class="tab-btn" data-target="#standings">STANDINGS</button>
           </div>
 
           <div class="content-box">
+            <!-- OVERVIEW -->
             <div class="content active" id="overview">
               <div class="overview-box">
                 <div class="box-1">
@@ -130,47 +150,48 @@
                   <div class="row">
                     <div class="box-small">
                       <div class="overview-icon">
-                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                        <img
+                          src="/GasLogin/assets/images/icon-ml.jpeg"
+                          alt="logo ml"
+                        />
                       </div>
                       <span class="desc-1">Game</span>
                       <span class="desc-2">Mobile Legends: Bang bang</span>
                     </div>
                     <div class="box-small">
                       <div class="overview-icon">
-                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                        <ion-icon name="people"></ion-icon>
                       </div>
                       <span class="desc-1">Teams</span>
                       <span class="desc-2">Open for 8 or 16 teams</span>
                     </div>
                     <div class="box-small">
                       <div class="overview-icon">
-                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                        <ion-icon name="diamond"></ion-icon>
                       </div>
                       <span class="desc-1">Prizes</span>
                       <span class="desc-2">Prizes up to 6000 💎</span>
                     </div>
                     <div class="box-small">
                       <div class="overview-icon">
-                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                        <ion-icon name="location"></ion-icon>
                       </div>
                       <span class="desc-1">Location</span>
                       <span class="desc-2">UPI CIBIRU (tentative)</span>
                     </div>
                     <div class="box-small">
                       <div class="overview-icon">
-                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                        <ion-icon name="easel"></ion-icon>
                       </div>
                       <span class="desc-1">Requirements</span>
                       <span class="desc-2">
-                        <ul>
-                          <li>Student of UPI CIBIRU</li>
-                          <li>Free (no fee Required)</li>
-                        </ul>
+                        <p>- Student UPI Cibiru (only)</p>
+                        <p>- Free (no fee required)</p>
                       </span>
                     </div>
                     <div class="box-small">
                       <div class="overview-icon">
-                        <img src="./assets/images/icon-ml.jpeg" alt="logo ml" />
+                        <ion-icon name="git-branch"></ion-icon>
                       </div>
                       <span class="desc-1">Format</span>
                       <span class="desc-2">Single Eliminations</span>
@@ -236,6 +257,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- BRACKET -->
             <div class="content" id="bracket">
               <h2>Bracket</h2>
               <img src="./assets/images/bracket.png" alt="bracket" />
@@ -254,7 +277,7 @@
             </div>
             <div class="content" id="standings">
               <h2>Standings</h2>
-              <p>Coming Soon...</p>
+              <h5>Coming Soon...</h5>
             </div>
           </div>
         </div>

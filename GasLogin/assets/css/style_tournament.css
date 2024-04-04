@@ -157,7 +157,6 @@ body {
   cursor: pointer;
   padding: 10px; 
   border: none; 
-  z-index: 10; 
 }
 
 .prev:hover,
@@ -296,11 +295,11 @@ body {
   /* homepage */
 
   .homepage .content h1 {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .homepage .content .text {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .content a {
@@ -318,11 +317,11 @@ body {
   .carousel .prev,
   .carousel .next {
     /* Adjust button size for better visibility and interaction */
-    width: 35px; /* Adjusted size */
-    height: 48px;
-    font-size: 24px; /* Adjusted icon size for clarity */
+    width: 25px; /* Adjusted size */
+    height: 35px;
+    font-size: 20px; /* Adjusted icon size for clarity */
+    padding: 0;
   }
-
 
   .image-title {
     padding: 0 8px; /* Smaller padding inside the title */

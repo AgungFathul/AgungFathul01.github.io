@@ -187,10 +187,10 @@ body {
 /* Container to hold buttons, ensuring it's centered and has spacing */
 .filter-buttons {
   display: flex;
-  /* justify-content: center; */
-  padding-left: 30px;
+  flex-wrap: wrap;
+  padding-left: 25px;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Style for individual buttons */
@@ -203,7 +203,7 @@ body {
   text-align: center;
   transition: background-color 0.3s ease;
   user-select: none;
-  margin-right: 10px; /* Space between buttons */
+  margin-right: 6px; /* Space between buttons */
 }
 
 /* Hover and active styles */
@@ -323,6 +323,7 @@ body {
     font-size: 24px; /* Adjusted icon size for clarity */
   }
 
+
   .image-title {
     padding: 0 8px; /* Smaller padding inside the title */
     font-size: 13px; /* Smaller font size for the title */
@@ -333,12 +334,11 @@ body {
   .filter-buttons {
     flex-direction: row; /* Keep buttons in a row on small screens */
     flex-wrap: wrap; /* Allow buttons to wrap if needed */
-    gap: 10px; /* Reduce gap for smaller screens */
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   .filter-button {
-    padding: 8px 16px; /* Smaller padding */
+    padding: 6px 12px; /* Smaller padding */
     font-size: 14px; /* Smaller font size */
   }
 

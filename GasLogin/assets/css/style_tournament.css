@@ -217,18 +217,17 @@ body {
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Adjust minmax values as needed */
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  max-width: 1200px; /* Atur lebar maksimum kontainer */
+  margin: 0 auto;
 }
 
 .card {
   display: flex;
+  width: 380px; 
+  margin: 10px;
   flex-direction: column;
   background: hsl(228, 12%, 17%); /* Background color for the cards */
   border-radius: 8px; /* Rounded corners for the cards */
@@ -342,7 +341,7 @@ body {
   }
 
   .card-container {
-    grid-template-columns: 1fr; /* Single column grid for mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Single column grid for mobile */
     padding: 10px; /* Adjust padding for smaller screens */
   }
 

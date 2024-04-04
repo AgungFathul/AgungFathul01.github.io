@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const noMatchMessage = document.createElement('p');
     noMatchMessage.textContent = 'No events match your filter.';
     noMatchMessage.style.display = 'none';
-    noMatchMessage.style.color = 'white'; // Adjust as necessary for your theme
+    noMatchMessage.style.color = 'white'; 
     document.querySelector('.card-container').appendChild(noMatchMessage);
 
     function filterCards(status) {
@@ -78,10 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const cards = document.querySelectorAll('.card');
         cards.forEach(card => {
             if (status === 'all' || card.getAttribute('data-status') === status) {
-                card.style.display = '';
+                card.style.display = 'block'; // Mengubah tampilan kartu menjadi block
                 hasVisibleCards = true;
             } else {
-                card.style.display = 'none';
+                card.style.display = 'none'; // Sembunyikan kartu yang tidak cocok
             }
         });
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('currentFilter', status);
     }
 
-    // Update button states and add event listeners
+    // Update status button 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             filterCards(button.getAttribute('data-filter'));
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.classList.add('active');
         });
 
-        // Set initial filter from local storage or default to 'all'
+        
         const savedFilter = localStorage.getItem('currentFilter') || 'all';
         if (button.getAttribute('data-filter') === savedFilter) {
             button.classList.add('active');
@@ -105,6 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
 
 document.querySelectorAll('.filter-button').forEach(button => {
     button.addEventListener('click', function() {
@@ -118,4 +122,3 @@ document.querySelectorAll('.filter-button').forEach(button => {
         }
     });
 });
-  

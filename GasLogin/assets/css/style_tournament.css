@@ -70,7 +70,7 @@ body {
 
 .content a:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.3);
+  background: hsl(31, 100%, 51%);
 }
 
 /* List Game */
@@ -148,6 +148,18 @@ body {
   right: 10px;
 }
 
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: hsl(228, 12%, 17%); 
+  color: hsl(31, 100%, 51%); 
+  cursor: pointer;
+  padding: 10px; 
+  border: none; 
+  z-index: 10; 
+}
+
 .prev:hover,
 .next:hover {
   opacity: 1; /* Fully visible when hovered */
@@ -168,7 +180,7 @@ body {
 .filter-section {
   position: relative; /* If not already set */
   z-index: 20; /* Higher than other content if needed */
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  background: hsl(228, 12%, 17%); /* Semi-transparent background */
   padding: 20px 0;
 }
 
@@ -186,7 +198,7 @@ body {
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 20px;
-  background-color: #333;
+  background-color: hsl(228, 12%, 17%);
   color: #fff;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -197,11 +209,11 @@ body {
 /* Hover and active styles */
 .filter-button:hover,
 .filter-button.active {
-  background-color: #007bff;
+  background-color: hsl(31, 100%, 51%);
 }
 
 .filter-button.active {
-  background-color: #007bff;
+  background-color: hsl(31, 100%, 51%);
   color: white; /* Ensure text color contrasts well with the active background */
 }
 
@@ -219,7 +231,7 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  background: #fff; /* Background color for the cards */
+  background: hsl(228, 12%, 17%); /* Background color for the cards */
   border-radius: 8px; /* Rounded corners for the cards */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth perception */
   overflow: hidden;
@@ -254,14 +266,14 @@ body {
 }
 
 .status-upcoming {
-  background-color: #f9a825; /* Yellow for upcoming events */
+  background-color: #f9a825; 
 }
 .status-ongoing {
-  background-color: #43a047; /* Green for ongoing events */
+  background-color: #43a047; 
 }
 
 .status-completed {
-  background-color: #790000; /* Grey for completed events */
+  background-color: #790000; 
 }
 
 .card-body {
@@ -272,11 +284,12 @@ body {
 .tournament-name {
   font-size: 18px;
   margin: 10px 0;
+  color: hsl(0, 0%, 100%);
 }
 
 .tournament-detail {
   font-size: 14px;
-  color: #bbb;
+  color: hsl(0, 0%, 100%);
 }
 
 @media screen and (max-width: 860px) {

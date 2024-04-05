@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Create Tournament</title>
+            <link rel="stylesheet" href="./assets/css/style.css">
+            <link rel="stylesheet" href="./assets/css/style_createTournament.css">
+            <script type="text/javascript" src="./assets/js/script_createTournament.js"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        </head>
+        <body>
+                <!-- 
+    - #HEADER
+  -->
+    <header class="header">
+      <div class="overlay" data-overlay></div>
+
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo.png"
+            alt="GASLogin logo"
+            width="110vh"
+            height="110vh"
+          />
+        </a>
+
+        <button class="nav-open-btn" data-nav-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-nav>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/logo.png"
+                alt="GASLogin logo"
+                width="110vh"
+                height="110vh"
+              />
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link">About</a>
+            </li>
+
+            <li>
+              <a href="tournament.html" class="navbar-link">Tournament</a>
+            </li>
+          </ul>
+
+          <ul class="nav-social-list">
+            <li>
+              <a href="login.html">
+                <button style="color: hsl(31, 100%, 51%)">
+                  <span>Log-in</span>
+                </button></a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+          <a href="login.html">
+            <button class="btn-sign_in">
+              <div class="icon-box">
+                <ion-icon name="log-in-outline"></ion-icon>
+              </div>
+
+              <span>Log-in</span>
+            </button></a
+          >
+        </div>
+      </div>
+    </header>
+            <div class="progressbar">
+
+            </div>
+            <form id="infoturnamen">
+                <div class="infodasar">
+                    <h2>Informasi Dasar Turnamen</h2>
+                    <h6>Nama Turnamen</h6>
+                    <input type="text" placeholder="Nama Turnamen">
+                    <h6>Custom URL Turnamen</h6>
+                    <input type="text" placeholder="Custom URL Turnamen">
+                </div>
+                <div class="infogame">
+                    <h3>Platform</h3>
+                    <h3>Permainan</h3>
+                    <div class="infogame-container">
+                        <div class="platform">
+                            <button>PC</button>
+                            <button>Mobile</button>
+                            <button>PS4</button>
+                            <button>Console</button>
+                        </div>
+                        <div class="gamelist">
+                            <div class="game">
+                                <img class="valo" src="img\valorant.jpg">
+                            </div>
+                            <div class="game">
+                                <img class="cs2" src="img\cs2.jpg">
+                            </div>
+                            <div class="game">
+                                <img class="dota2" src="img\dota2.jpg">
+                            </div>
+                            <div class="game">
+                                <img class="pubg" src="img\pubgg.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deskripsi">
+                    <h2>Deskripsi Turnamen</h2>
+                    <input type="textarea" placeholder="Deskripsi Turnamen">
+                </div>
+                <div class="jadwal">
+                    <h2>Jadwal Turnamen</h2>
+                    <h6>Tanggal Mulai</h6>
+                    <input type="date" placeholder="dd/mm/yyyy">
+                    <h6>Tanggal Selesai</h6>
+                    <input type="date" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="lokasi">
+                    <h2>Lokasi Turnamen</h2>
+                    <div class="lokasi-container">
+                        <div class="lokasi-button">
+                            <button>Offline</button>
+                            <button>Online</button>
+                            <button>Hybrid</button>
+                        </div>
+                        <div class="lokasi-input">
+                            <div class="lokasi-line1">
+                                <div class="namatempat">
+                                    <h6>Nama Tempat</h6>
+                                    <input type="text" placeholder="Nama Tempat">
+                                </div>
+                                <div class="namatempat">
+                                    <h6>Negara</h6>
+                                    <input type="text" placeholder="Negara">
+                                </div>
+                            </div>
+                            <div class="lokasi-line2">
+                                <div class="namatempat">
+                                    <h6>Nama Tempat</h6>
+                                    <input type="text" placeholder="Provinsi">
+                                </div>
+                                <div class="namatempat">
+                                    <h6>Kota/Kabupaten</h6>
+                                    <input type="text" placeholder="Kota/Kabupaten">
+                                </div>
+                            </div>
+                            <div class="detailalamat">
+                                <h6>Detail Alamat</h6>
+                                <input type="textarea" placeholder="Detail alamat">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailturnamen">
+                    <h2>Detail Turnamen</h2>
+                    <h3>Hadiah (Opsional)</h3>
+                    <div class="hadiah">
+                        <button>+ Tambah Hadiah</button>
+                    </div>
+                    <h3>Aturan (Opsional)</h3>
+                    <input type="textarea" placeholder="Aturan">
+                    <h3>FAQ (Opsional)</h3>
+                    <div class="faq">
+                        <button>+ Tambah FAQ</button>
+                    </div>
+                    <h3>Sponsor (Opsional)</h3>
+                    <div class="sponsor">
+                        <button>+ Tambah Sponsor</button>
+                    </div>
+                    <div class="konfirmasi">
+                        <button id="selanjutnya">Selanjutnya</button>
+                        <button id="simpansebagaidraft">Simpan Sebagai Draft</button>
+                    </div>
+                </div>
+            </form>
+            </body>
+        </body>
+    </html>

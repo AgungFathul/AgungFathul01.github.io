@@ -107,7 +107,7 @@ h6 {
 }
 
 button {
-    font-family: Poppins;
+    font-family: var(--ff-poppins);
     font-weight: bold;
 }
 
@@ -146,6 +146,7 @@ button {
     border-bottom: 1px solid var(--white);
     border-radius: 0px;
     background-color: transparent;
+    color: var(--white);
 }
 
 .infogame {
@@ -174,12 +175,14 @@ button {
 }
 
 .infogame button {
+    transition: var(--transition-1);
     display: block;
     width: 206px;
     height: 80px;
     margin: 12px 0px;
     padding: auto;
     background-color: var(--orange);
+    color: var(--white);
     border: none;
     border-radius: 40px;
 }
@@ -215,13 +218,23 @@ button {
     height: 299px;
 }
 
-.deskripsi input[type="textarea"] {
+.deskripsi textarea{
     width: 92%;
     height: 422px;
     padding: 12px;
     background-color: var(--raisin-black-3);
-    border: 3px solid #797979;
+    border: 3px solid var(--platinum);
     border-radius: 10px;
+    text-align: justify;
+    font-family: var(--ff-poppins);
+    color: var(--white);
+    overflow: auto;
+    resize: vertical;
+}
+
+.deskripsi textarea:focus {
+    border: 3px solid var(--orange);
+    outline: none;
 }
 
 .lokasi {
@@ -246,14 +259,22 @@ button {
 }
 
 .lokasi-button button {
+    transition: var(--transition-1);
     display: block;
     width: 206px;
     height: 80px;
     margin: 12px 0px;
     padding: auto;
     background-color: var(--orange);
+    color: var(--white);
     border: none;
     border-radius: 40px;
+}
+
+.lokasi-button button:hover, .infogame button:hover {
+    transition: var(--transition-1);
+    background-color: var(--white);
+    color: var(--eerie-black);
 }
 
 .lokasi-input {
@@ -267,33 +288,57 @@ button {
     background-color: var(--eerie-black);
 }
 
-.lokasi-line1 {
+.lokasi-line1, .lokasi-line2 {
     display: flex;
     justify-content: space-between;
+    margin: 12px 0;
 
-}
-.lokasi-line2 {
-    display: flex;
-    justify-content: space-between;
 }
 
 .lokasi-input input[type="text"] {
-    width: 70vh;
+    width: 50vh;
     height: 48px;
-    border: none;
+    border-left: none;
+    border-right: none;
     outline: none;
     border-bottom: 1px solid var(--white);
     border-radius: 0px;
     background-color: transparent;
+    color: var(--white);
 }
 
-.detailalamat input[type="textarea"]{
+.lokasi-input input[type="text"]:focus {
+    border-bottom: 1px solid var(--orange);
+    outline: none;
+}
+
+.lokasi-input input[type="text"]::placeholder {
+}
+
+
+.lokasi-input input[type="text"]::selection {
+    color: var(--white);
+}
+
+
+.detailalamat textarea {
+    display: flex;
     width: 96%;
     height: 100px;
-    padding: 12px;
+    padding: 16px;
     background-color: var(--raisin-black-3);
-    border: 3px solid #797979;
+    border: 2px solid var(--platinum);
     border-radius: 10px;
+    text-align: justify;
+    font-family: var(--ff-poppins);
+    color: var(--white);
+    overflow: auto;
+    resize: vertical;
+}
+
+.detailalamat textarea:focus {
+    border: 2px solid var(--orange);
+    outline: none;
 }
 
 .hadiah, .faq, .sponsor, .konfirmasi{
@@ -305,6 +350,7 @@ button {
 }
 
 .hadiah button, .faq button, .sponsor button {
+    transition: var(--transition-1);
     display: block;
     width: 206px;
     height: 80px;
@@ -316,14 +362,30 @@ button {
     font-size: 16px;
 }
 
-.detailturnamen input[type="textarea"] {
+.hadiah button:hover, .faq button:hover, .sponsor button:hover {
+    transition: var(--transition-1);
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.detailturnamen textarea {
     width: 96%;
     height: 422px;
     margin: 32px 32px 32px 0px;
     padding: 12px;
     background-color: var(--raisin-black-3);
-    border: 3px solid #797979;
+    border: 3px solid var(--platinum);
     border-radius: 10px;
+    text-align: justify;
+    font-family: var(--ff-poppins);
+    color: var(--white);
+    overflow: auto;
+    resize: vertical;
+}
+
+.detailturnamen textarea:focus {
+    border: 3px solid var(--orange);
+    outline: none;
 }
 
 #selanjutnya, #simpansebagaidraft{
@@ -336,7 +398,7 @@ button {
     border-radius: 20px;
     font-family: var(--ff-oswald);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 32px;
     color: #FFFFFF;
 }
 

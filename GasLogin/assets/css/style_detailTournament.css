@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/section-wrapper-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-header {
+  margin-top: 60px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.tour-bg {
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--xiketic)),
+    url(/GasLogin/assets/images/ml.jpg) no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-information {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  max-width: 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 30);
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .tour-information {
+    margin-top: 200px;
+  }
+}
+
+.tour-information li {
+  margin-left: 40px;
+  display: flex;
+  padding-bottom: 3px;
+}
+
+.tour-information li .icon {
+  margin-right: 10px;
+}
+.tour-information h1 {
+  font-family: var(--ff-oswald);
+  font-size: 45px;
+  font-weight: bold;
+  margin-left: 15px;
+  color: var(--orange);
+}
+
+h5,
+h4 {
+  font-size: var(--fs-7);
+  font-weight: 400;
+  color: var(--orange);
+  line-height: 1.2;
+  font-family: var(--ff-oswald);
+  margin-bottom: 8px;
+  margin-left: 15px;
+}
+
+.tour-information p {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+.tab-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-box {
+  width: 100%;
+  background-color: transparent;
+}
+
+.tab-box .tab-btns {
+  margin: 40px 40px 20px 40px;
+  padding: 0 20px 0 20px;
+}
+
+.tab-btns {
+  display: flex;
+  border-bottom: 1px solid #ff8800;
+  outline: none;
+}
+
+.tab-btn {
+  position: relative;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-6);
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 2px solid transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #ff8800;
+}
+
+.tab-btn.active {
+  color: #ff8800;
+  border-bottom-color: #ff8800;
+}
+
+.tab-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff8800;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-btn.active:after {
+  width: 80%;
+  transform: translateX(13%);
+}
+
+.content-box {
+  width: 100%;
+  margin-top: 40px;
+  padding: 25px 25px 25px 40px;
+}
+
+.content {
+  display: none;
+  animation: fade-in 0.5s ease;
+}
+
+.content h2 {
+  padding-bottom: 30px;
+  color: var(--white);
+}
+
+.content.active {
+  display: block;
+}
+
+iframe {
+  width: 100%;
+  height: 315px;
+  max-width: 560px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* overview */
+.overview-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-1 {
+  width: 70%;
+  color: #ff8800;
+}
+
+.box-2 {
+  width: 30%;
+  color: #ff8800;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.box-small {
+  width: 30%;
+  max-width: calc(33.33% - 5%);
+  border: 0.5px solid rgba(255, 134, 5, 0.3);
+  color: #ffffff;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.box-small .desc-1 {
+  font-weight: bolder;
+  color: var(--orange);
+  font-family: var(--ff-oswald);
+}
+
+.overview-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 20%;
+}
+
+.overview-icon {
+  font-size: 32px;
+  padding-bottom: 10px;
+}
+
+.desc-2 li {
+  margin-left: 20px;
+}
+
+.desc-2 {
+  margin-top: 5px;
+  font-family: var(--ff-poppins);
+  font-size: small;
+}
+
+.box-large {
+  width: 100%;
+  color: #ffffff;
+  border: 0.5px solid rgba(255, 134, 5, 0.3);
+  max-height: fit-content;
+  padding: 10px 25px 5px 25px;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: var(--orange);
+}
+
+th,
+td {
+  border-bottom: 1px solid rgba(255, 134, 5, 0.5);
+  padding: 8px;
+  text-align: left;
+  border-right: none;
+}
+
+th:first-child,
+td:first-child {
+  text-align: center;
+}
+
+table tbody tr:last-child td,
+table tbody tr:last-child th {
+  border-bottom: none;
+}

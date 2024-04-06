@@ -293,17 +293,26 @@ body {
 @media screen and (max-width: 860px) {
   /* homepage */
 
+  .homepage {
+    height: auto; /* Instead of 100vh to take up only needed space */
+    padding-top: 110px;
+  }
+
   .homepage .content h1 {
-    font-size: 34px;
+    font-size: 28px; /* Smaller font size for the main title */
+    margin-bottom: 5px; /* Reduce the margin bottom */
   }
 
   .homepage .content .text {
-    font-size: 14px;
+    font-size: 14px; /* Smaller text for better fit on smaller screens */
+    margin-top: 60px; /* Adjusted margin */
+    margin-bottom: 30px; /* Adjusted margin */
   }
 
   .content a {
-    font-size: 17px;
-    padding: 9px 20px;
+    font-size: 16px; /* Smaller font size for buttons */
+    padding: 8px 20px; /* Adjust padding */
+    margin: 0 5px; /* Adjust margin */
   }
 
   /* event list */
@@ -341,12 +350,17 @@ body {
   }
 
   .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Single column grid for mobile */
-    padding: 10px; /* Adjust padding for smaller screens */
+    justify-content: center;
+  }
+
+  .card{
+    width: 100%; 
+    max-width: 340px; 
+    margin: 10px;
   }
 
   .card-header img {
-    height: 250px; /* Fixed height for header images */
+    height: 200px; /* Fixed height for header images */
   }
 
   .card-body {

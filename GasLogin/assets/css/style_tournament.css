@@ -351,12 +351,14 @@ body {
 
   .card-container {
     justify-content: center;
+    max-width: 100%;
+    padding: 0 15px;
   }
 
   .card{
     width: 90%; 
-    max-width: 340px; 
-    margin: 10px;
+    max-width: 300px; 
+    margin: 10px auto;
   }
 
   .card-header img {

@@ -356,8 +356,8 @@ body {
   }
 
   .card{
-    width: 90%; 
-    max-width: 340px; 
+    width: 100%; 
+    max-width: 300px; 
     margin: 10px;
   }
 

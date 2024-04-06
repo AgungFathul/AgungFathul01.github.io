@@ -31,21 +31,15 @@ body {
 
 .tour-information {
   position: absolute;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left: 20px;
   margin-bottom: 20px;
-  max-width: 45%;
+  max-width: 80%;
   padding: 20px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 30);
   z-index: 1;
-}
-
-@media screen and (min-width: 768px) {
-  .tour-information {
-    margin-top: 200px;
-  }
 }
 
 .tour-information li {
@@ -103,6 +97,15 @@ h4 {
   display: flex;
   border-bottom: 1px solid #ff8800;
   outline: none;
+  overflow-x: auto;
+}
+
+.tab-btns::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btns .tab-btn {
+  min-width: fit-content;
 }
 
 .tab-btn {
@@ -133,22 +136,23 @@ h4 {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
   width: 0;
   height: 2px;
   background-color: #ff8800;
-  transition: all 0.3s ease-in-out;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
 }
 
-.tab-btn.active:after {
-  width: 80%;
-  transform: translateX(13%);
+.tab-btn.active:after,
+.tab-btn:hover:after {
+  width: 100%;
+  transform: scale(1, 1);
 }
 
 .content-box {
   width: 100%;
   margin-top: 40px;
-  padding: 25px 25px 25px 40px;
+  padding: 25px 50px 25px 50px;
 }
 
 .content {
@@ -157,18 +161,12 @@ h4 {
 }
 
 .content h2 {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   color: var(--white);
 }
 
 .content.active {
   display: block;
-}
-
-iframe {
-  width: 100%;
-  height: 315px;
-  max-width: 560px;
 }
 
 @keyframes fade-in {
@@ -189,32 +187,58 @@ iframe {
 }
 
 .box-1 {
-  width: 70%;
+  width: 65%;
   color: #ff8800;
+  margin-right: 30px;
+}
+
+.desc-overview {
+  padding: 20px 10px 20px 10px;
+  text-align: justify;
+  color: var(--white);
+  border: 0.5px solid rgba(255, 134, 5, 0.5);
+  border-left: none;
+  border-right: none;
+  margin-bottom: 15px;
+}
+
+.desc-overview span {
+  font-style: italic;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: var(--orange);
 }
 
 .box-2 {
-  width: 30%;
+  width: 35%;
   color: #ff8800;
+}
+
+.box-2 p {
+  color: var(--white);
+  font-size: var(--fs-9);
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
 }
 
 .box-small {
-  width: 30%;
-  max-width: calc(33.33% - 5%);
-  border: 0.5px solid rgba(255, 134, 5, 0.3);
+  width: 100%;
+  max-width: 25%;
+  border-right: 0.5px solid rgba(255, 134, 5, 0.3);
   color: #ffffff;
-  margin-right: 5%;
   margin-bottom: 2%;
   padding: 2%;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+}
+
+.box-small:last-child {
+  border-right: none;
 }
 
 .box-small .desc-1 {
@@ -244,13 +268,33 @@ iframe {
   font-size: small;
 }
 
+.box-fill {
+  margin-bottom: 25px;
+}
+
 .box-large {
   width: 100%;
   color: #ffffff;
-  border: 0.5px solid rgba(255, 134, 5, 0.3);
+  background-color: var(--raisin-black-2);
+  box-shadow: 0 4px 8px #0000003b;
   max-height: fit-content;
-  padding: 10px 25px 5px 25px;
-  border-radius: 12px;
+  padding: 10px 25px 20px 25px;
+}
+
+.desc-location .loct {
+  display: flex;
+  flex-direction: row;
+}
+
+.desc-location .loct .icon {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.desc-location span {
+  color: rgba(255, 134, 5, 0.7);
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 table {
@@ -262,11 +306,15 @@ th {
   color: var(--orange);
 }
 
+td {
+  color: var(--white);
+}
+
 th,
 td {
   border-bottom: 1px solid rgba(255, 134, 5, 0.5);
   padding: 8px;
-  text-align: left;
+  text-align: center;
   border-right: none;
 }
 
@@ -278,4 +326,36 @@ td:first-child {
 table tbody tr:last-child td,
 table tbody tr:last-child th {
   border-bottom: none;
+}
+
+.detail-standings {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  padding: 10px 25px 0 25px;
+  background-color: var(--raisin-black-2);
+  box-shadow: 0 4px 8px #0000003b;
+}
+
+@media screen and (min-width: 768px) {
+  .tour-information {
+    margin-top: 150px;
+    max-width: 50%;
+  }
+
+  .detail-standings {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .overview-box {
+    flex-direction: column;
+  }
+
+  .box-1,
+  .box-2 {
+    width: 100%;
+  }
 }

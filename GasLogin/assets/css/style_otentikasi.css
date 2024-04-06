@@ -1,9 +1,3 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
 body{
     font-family: 'Poppins', sans-serif;
 	background: url("../images/section-wrapper-bg.jpg") no-repeat;
@@ -20,11 +14,9 @@ body{
 
 .container-logreg{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-
 }
 
 .desc{
@@ -104,7 +96,7 @@ body{
 	text-align: center;
 }
 
-form{
+.login-content form{
 	width: 500px;
 }
 
@@ -226,8 +218,10 @@ form{
 	width: 100%;
 
 }
+
 .remember-forgot .tac span {
 	text-align: left;
+	margin-left: 5px;
 }
 
 .remember-forgot .tac input[type="checkbox"] {
@@ -307,7 +301,7 @@ form{
 }
 
 @media screen and (max-width: 1200px){
-	form{
+	.login-content form{
 		width: 350px;
 	}
 
@@ -334,5 +328,25 @@ form{
 
 	.login-content{
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 376px){
+	.login-content form{
+		width: 300px;
+	}
+
+	.remember-forgot, .login-register, .login-register a {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 309px){
+	.login-content form{
+		width: 250px;
+	}
+
+	.remember-forgot, .login-register, .login-register a {
+		font-size: 10px;
 	}
 }

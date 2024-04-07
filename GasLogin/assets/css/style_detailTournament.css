@@ -17,6 +17,7 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  max-height: fit-content;
 }
 
 .tour-bg {
@@ -25,6 +26,7 @@ body {
     url(/GasLogin/assets/images/ml.jpg) no-repeat;
   width: 100%;
   height: 100%;
+
   background-size: cover;
   background-position: center;
 }
@@ -194,7 +196,6 @@ h4 {
 
 .desc-overview {
   padding: 20px 10px 20px 10px;
-  text-align: justify;
   color: var(--white);
   border: 0.5px solid rgba(255, 134, 5, 0.5);
   border-left: none;

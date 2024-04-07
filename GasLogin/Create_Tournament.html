@@ -87,8 +87,8 @@
         </div>
       </div>
     </header>
-            <div class="progressbar">
-
+            <div class="titlebar">
+                <h1>Create Your Own Tournament</h1>
             </div>
             <form id="infoturnamen">
                 <div class="infodasar">
@@ -103,10 +103,10 @@
                     <h3>Permainan</h3>
                     <div class="infogame-container">
                         <div class="platform">
-                            <button type="button" id="pc">PC</button>
-                            <button type="button" id="mobile">Mobile</button>
-                            <button type="button" id="ps4">PS4</button>
-                            <button type="button" id="console">Console</button>
+                            <button type="button" class="platformbutt platformbutton" id="pc">PC</button>
+                            <button type="button" class="platformbutt platformbutton" id="mobile">Mobile</button>
+                            <button type="button" class="platformbutt platformbutton" id="ps4">PS4</button>
+                            <button type="button" class="platformbutt platformbutton" id="console">Console</button>
                         </div>
                         <div class="gamelist">
                             <div class="game">
@@ -139,9 +139,9 @@
                     <h2>Lokasi Turnamen</h2>
                     <div class="lokasi-container">
                         <div class="lokasi-button">
-                            <button>Offline</button>
-                            <button>Online</button>
-                            <button>Hybrid</button>
+                            <button type="button" id="offlinebtn" class="lokasi-buttons lokasibuttons">Offline</button>
+                            <button type="button" id="onlinebtn" class="lokasi-buttons lokasibuttons">Online</button>
+                            <button type="button" id="hybridbtn" class="lokasi-buttons lokasibuttons">Hybrid</button>
                         </div>
                         <div class="lokasi-input">
                             <div class="lokasi-line1">
@@ -166,7 +166,7 @@
                             </div>
                             <div class="detailalamat">
                                 <h6>Detail Alamat</h6>
-                                <textarea placeholder="Detail alamat" rows="5"></textarea>
+                                <textarea id="keterangan" placeholder="Detail alamat" rows="5"></textarea>
                             </div>
                         </div>
                     </div>

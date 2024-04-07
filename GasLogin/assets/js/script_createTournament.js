@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         changeImageSrc([
             "./assets/images/lolwr.jpg",
             "./assets/images/mlbbportrait.jpg",
-            "./assets/images/freefire.jpg",
+            "./assets/images/freefireportrait.jpg",
             "./assets/images/pubgm.jpg"
         ]);
     });

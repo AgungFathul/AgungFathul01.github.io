@@ -106,7 +106,7 @@ h6 {
     font-size: var(--fs-6);
 }
 
-button {
+.infogame button, .detailturnamen button{
     font-family: var(--ff-poppins);
     font-weight: bold;
 }
@@ -152,7 +152,7 @@ button {
 .infogame {
     display: block;
     width: 100%;
-    height: 472px;
+    height: 492px;
     background-color: var(--raisin-black-2);
     margin: 46px 0px 0px 0px;
     padding: var(--section-padding);
@@ -191,7 +191,7 @@ button {
     display: inline-flex;
     width: fit-content;
     height: 320px;
-    margin: 12px 0px 0px 58px;
+    margin: 12px 0px 12px 58px;
     padding: 25px 0px 25px 58px;
     border: none;
     border-left: 5px solid #000000;
@@ -216,6 +216,7 @@ button {
 .infogame .gamelist .game img {
     width: 211px;
     height: 299px;
+    object-fit: fill;
 }
 
 .deskripsi textarea{
@@ -285,6 +286,7 @@ button {
     margin: 12px 0px 12px 0px;
     padding: 25px 58px;
     border: none;
+    border-radius: 15px;
     background-color: var(--eerie-black);
 }
 
@@ -311,10 +313,6 @@ button {
     border-bottom: 1px solid var(--orange);
     outline: none;
 }
-
-.lokasi-input input[type="text"]::placeholder {
-}
-
 
 .lokasi-input input[type="text"]::selection {
     color: var(--white);
@@ -398,7 +396,7 @@ button {
     border-radius: 20px;
     font-family: var(--ff-oswald);
     font-weight: bold;
-    font-size: 32px;
+    font-size: 30px;
     color: #FFFFFF;
 }
 

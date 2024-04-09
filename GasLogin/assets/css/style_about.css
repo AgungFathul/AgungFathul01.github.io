@@ -6,26 +6,26 @@ body {
 }
 
 .progressbar {
-    display: block;
     width: 100%;
     height: 120px;
-    margin: 48px 0px 0px;
-    padding: auto;
+    margin-top: 48px;
     background-color: var(--raisin-black-2);
 }
 
-.about-head{
-    margin: 2vh;
+.about-head {
+    margin: 2vh 0;
+    text-align: center;
 }
 
 .about-head h1 {
-    font-size: 3rem; 
+    font-size: 3rem;
     font-weight: var(--fw-700);
     color: var(--orange);
+    margin-bottom: 1rem; 
 }
 
 #about-content h2 {
-    font-size: 2rem; 
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -38,15 +38,15 @@ body {
 }
 
 #about-text {
-    margin: 1rem 5vw; 
+    margin: 1rem 5vw;
     color: var(--white);
     text-align: center;
-    text-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.3); 
+    text-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .about-container {
     width: 100%;
-    padding: 5px;
+    padding: 10px; 
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -54,41 +54,36 @@ body {
 }
 
 .visi, .misi {
-    width: 400px;
+    width: 100%; 
+    max-width: 400px;
     height: auto;
     display: flex;
     flex-direction: column;
     background: transparent;
     border: 4px solid var(--orange);
-    border-radius: 4px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-    margin: 20px; 
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
     padding: 20px;
 }
 
 #about-profile {
-    max-width: 350px;
+    max-width: 400px;
     min-height: 250px;
     display: flex;
     flex-direction: column;
-    background: var(--raisin-black-2); 
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-    margin: 20px; 
+    background: var(--raisin-black-2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
     color: var(--white);
-    padding: 10px 10px;
+    padding: 20px; 
     align-items: center;
 }
 
-#about-profile h3{
-    color: var(--orange);
-}
-
-
 #about-profile:hover {
     transform: scale(1.01);
-    box-shadow: 0 2px 5px var(--orange); 
-
+    box-shadow: 0 2px 5px var(--orange);
 }
 
 #about-profile-header {
@@ -96,32 +91,44 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
+    background-color: var(--orange);
+    border-radius: 2% 2% 0 0;
+    max-height: 350px;
+    max-width: 350px;
     overflow: hidden;
     text-align: center;
 }
 
 #about-profile-header img {
+    clip-path: var(--polygon-2);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 
-#about-profile-body, #about-feature-body{
+.about-social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+#about-profile-body,
+#about-feature-body {
     text-align: center;
     display: flex;
     box-sizing: border-box;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
 }
 
 .about-box {
-    min-height: 20vh; 
+    min-height: 20vh;
     background-color: var(--raisin-black-2);
     color: var(--white);
     padding: 20px;
@@ -130,16 +137,16 @@ body {
 #about-feature {
     width: 320px;
     min-height: 300px;
-    background: var(--orange); 
+    background: var(--orange);
     border-radius: 2px;
-    margin: 20px; 
+    margin: 20px;
     color: var(--raisin-black-2);
     clip-path: var(--polygon-4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 35px;
+    padding: 20px; 
 }
 
 #about-feature-header ion-icon {
@@ -147,22 +154,37 @@ body {
     height: 100px;
 }
 
-#about-text p, #about-profile p, #about-feature p {
+#about-text p,
+#about-profile p,
+#about-feature p {
     font-family: var(--ff-poppins);
     font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
-.about-team{
-	margin: 7vh 0;
+.about-team {
+    margin: 7vh 0;
 }
 
-@media screen and (max-width: 415px){
-	.about-head h1 {
-        font-size: 2.5rem;
+@media screen and (max-width: 415px) {
+    .about-head h1 {
+        font-size: 2.2rem;
     }
 
-    .about-container h1, #about-content h2 {
-        font-size: 1.5rem;
+    .about-container h1,
+    #about-content h2,
+    #about-profile h2 {
+        font-size: 1.2rem;
+    }
+
+    #about-text p,
+    #about-profile p,
+    #about-feature p {
+        font-size: 0.8rem;
+    }
+
+    .about-social-media {
+        font-size: 1rem;
     }
 }
-

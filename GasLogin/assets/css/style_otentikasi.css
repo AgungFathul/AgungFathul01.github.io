@@ -43,7 +43,7 @@ body{
 .desc-content{
 	z-index: 1; 
 	text-align: center;
-	color: white;
+	color: var(--white);
 	margin: 100px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -63,10 +63,10 @@ body{
 
 #to-register {
     background-color: transparent;
-    color: #fff;
+    color: var(--white);
     font-size: 1rem;
     padding: 10px 45px;
-    border: 2px solid #fff;
+    border: 2px solid var(--white);
     border-radius: 4px;
     font-weight: 600;
     text-transform: uppercase;
@@ -76,9 +76,9 @@ body{
 }
 
 #to-register:hover {
-    background-color: hsl(31, 100%, 51%);
+    background-color: var(--orange);
     color: black;
-    border-color: hsl(31, 100%, 51%);
+    border-color: var(--orange);
 }
 
 .login-content{
@@ -106,7 +106,7 @@ body{
 
 .container-logreg h2{
 	margin: 15px 0;
-	color: white;
+	color: var(--white);
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
@@ -117,7 +117,7 @@ body{
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--white);
 }
 
 .login-content .input-div.one{
@@ -125,7 +125,7 @@ body{
 }
 
 .i{
-	color: white;
+	color: var(--white);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -145,7 +145,7 @@ body{
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: white;
+	color: var(--white);
 	font-size: 18px;
 	transition: .3s;
 }
@@ -156,7 +156,7 @@ body{
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color: hsl(31, 100%, 51%);
+	background-color: var(--orange);
 	transition: .4s;
 }
 
@@ -178,7 +178,7 @@ body{
 }
 
 .input-div.focus > .i > i{
-	color: hsl(31, 100%, 51%);
+	color: var(--orange);
 }
 
 .input-div > div > input{
@@ -192,7 +192,7 @@ body{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: white;
+	color: var(--white);
 	font-family: 'poppins', sans-serif;
 }
 
@@ -206,7 +206,7 @@ body{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    color: #999;
+    color: var(--light-gray);
     font-size: 0.9rem;
     transition: .3s;
 }
@@ -244,12 +244,12 @@ body{
 }
 
 .remember-forgot a {
-    color: #999;
+    color: var(--light-gray);
     text-decoration: none;
 }
 
 .remember-forgot a:hover {
-    color: hsl(31, 100%, 51%);
+    color: var(--orange);
 }
 
 .btn-logreg {
@@ -259,10 +259,10 @@ body{
 	border-radius: 4px;
 	outline: none;
 	border: none;
-	background-color: hsl(31, 100%, 51%);
+	background-color: var(--orange);
 	background-size: 200%;
 	font-size: 1.2rem;
-	color: #fff;
+	color: var(--white);
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 	margin: 1rem 0;
@@ -272,7 +272,7 @@ body{
 
 .btn-logreg:hover{
 	background-position: right;
-	background-color: #999;
+	background-color: var(--light-gray);
 	color: black;
 }
 
@@ -282,7 +282,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #999;
+    color: var(--light-gray);
     font-size: 0.9rem;
     transition: .3s;
 }
@@ -292,12 +292,12 @@ body{
 }
 
 .login-register a {
-    color: #999;
+    color: var(--light-gray);
     text-decoration: none;
 }
 
 .login-register a:hover {
-    color: hsl(31, 100%, 51%);
+    color: var(--orange);
 }
 
 @media screen and (max-width: 1200px){

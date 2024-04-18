@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  behavior: smooth;
+}
+
 body {
   background: url("../images/section-wrapper-bg.jpg") no-repeat;
   background-size: cover;
@@ -19,8 +23,7 @@ body {
 
 .tour-bg {
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0), var(--xiketic)),
-    url(/GasLogin/assets/images/ml.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--xiketic));
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -85,7 +88,14 @@ h4 {
   z-index: 1;
 }
 
-.reg-button {
+.reg-tour p {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--white);
+}
+
+.reg-button,
+.end-button {
   margin-top: 15px;
   width: 190px;
   height: 50px;
@@ -93,6 +103,132 @@ h4 {
   font-weight: 600;
   background-color: var(--orange);
   border-radius: 7px;
+}
+
+.end-button {
+  background-color: var(--xiketic);
+  border: 1.5px solid rgba(255, 134, 5, 0.5);
+  color: var(--orange);
+}
+
+.end-button:hover {
+  cursor: not-allowed;
+}
+
+.reg-button:hover {
+  background-color: var(--white);
+  transition: 0.3s ease;
+  color: var(--raisin-black-1);
+}
+
+.modal {
+  display: none;
+  margin-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--orange);
+}
+
+.modal-content {
+  background-color: var(--raisin-black-1);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--orange);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-button {
+  color: var(--white);
+  float: right;
+  font-size: 28px;
+  font-weight: small;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--fs-9);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: var(--orange);
+  width: 200px;
+  padding: 7px 17px 7px 17px;
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+.submit-button:hover {
+  background-color: var(--white);
+  transition: 0.3s ease;
+  color: var(--raisin-black-1);
+}
+
+.captain-info {
+  margin: 15px 0;
+  padding: 10px;
+  border: 0.5px solid rgba(255, 134, 5, 0.5);
+  border-radius: 5px;
+  color: var(--white);
+}
+.captain-info p {
+  font-weight: bold;
+}
+
+.captain-info small {
+  font-size: small;
+}
+.capt-card {
+  display: flex;
+  width: 100%;
+  color: var(--orange);
+}
+.capt-uname,
+.capt-id {
+  width: 50%;
+  margin: 10px;
+}
+.reg-member-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.reg-member-info {
+  width: 48%;
+  max-width: 48%;
+  padding: 10px;
+  /* border: 0.5px solid rgba(255, 134, 5, 0.5); */
+  color: var(--white);
+  margin: 5px;
+  font-weight: bold;
+}
+
+.reg-member-info label {
+  color: #ff8800;
+  font-size: small;
+  font-weight: 100;
+}
+
+.modal input[type="text"] {
+  background-color: var(--raisin-black-2);
+  border-bottom: 0.5px solid rgba(255, 134, 5, 0.5);
+  color: var(--white);
+  padding: 5px;
+  font-weight: 50;
+  font-size: small;
+  outline: none;
 }
 
 button .tab-container {
@@ -363,6 +499,54 @@ table tbody tr:last-child th {
   min-width: fit-content;
 }
 
+/* FORM REG */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  max-width: 300px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  margin-bottom: 5px;
+}
+
+.register-form input[type="text"] {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .modal {
+    margin-top: 150px;
+  }
+  .capt-card {
+    flex-wrap: wrap;
+  }
+
+  .reg-member-info {
+    width: 100%;
+    max-width: 100%;
+    border: 0.5px solid rgba(255, 134, 5, 0.5);
+    border-radius: 3px;
+  }
+
+  .capt-uname,
+  .capt-id {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .tour-information {
     margin-top: 150px;
@@ -371,6 +555,27 @@ table tbody tr:last-child th {
 
   .detail-standings {
     width: 80%;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .modal-content {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 920px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .modal-content {
+    width: 60%;
+    margin-top: 100px;
   }
 }
 

@@ -160,6 +160,7 @@ body {
 
 .about-team {
   margin: 7vh 0;
+  margin-top: 35vh;
 }
 
 @media screen and (max-width: 415px) {

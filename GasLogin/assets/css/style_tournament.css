@@ -30,6 +30,7 @@ body {
 }
 
 .homepage .content {
+  margin-top: 10vh;
   display: flex;
   height: 85%;
   z-index: 3;
@@ -148,15 +149,16 @@ body {
   right: 10px;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: hsl(228, 12%, 17%); 
-  color: hsl(31, 100%, 51%); 
+  background-color: hsl(228, 12%, 17%);
+  color: hsl(31, 100%, 51%);
   cursor: pointer;
-  padding: 10px; 
-  border: none; 
+  padding: 10px;
+  border: none;
 }
 
 .prev:hover,
@@ -226,7 +228,7 @@ body {
 
 .card {
   display: flex;
-  width: 380px; 
+  width: 380px;
   margin: 10px;
   flex-direction: column;
   background: hsl(228, 12%, 17%); /* Background color for the cards */
@@ -264,14 +266,14 @@ body {
 }
 
 .status-upcoming {
-  background-color: #f9a825; 
+  background-color: #f9a825;
 }
 .status-ongoing {
-  background-color: #43a047; 
+  background-color: #43a047;
 }
 
 .status-completed {
-  background-color: #790000; 
+  background-color: #790000;
 }
 
 .card-body {
@@ -355,9 +357,9 @@ body {
     padding: 0 15px;
   }
 
-  .card{
-    width: 100%; 
-    max-width: 300px; 
+  .card {
+    width: 100%;
+    max-width: 300px;
     margin: 10px;
   }
 

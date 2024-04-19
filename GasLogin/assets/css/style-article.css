@@ -50,7 +50,7 @@ a {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: var(--orange);
 }
 
 .bg-light {
@@ -107,8 +107,7 @@ a {
 }
 
 .btn-primary {
-  border-radius: 4px;
-  background-color: var(--secondary-color);
+  background-color: var(--orange);
 }
 
 .object-fit {
@@ -215,6 +214,26 @@ a {
 }
 
 /* ----------- .Main Section ---------- */
+
+.comment-form input {
+  width: 100%;
+  margin: 0 5px 5px 0;
+  background-color: var(--raisin-black-3);
+  text-align: justify;
+  font-family: var(--ff-poppins);
+  color: var(--light-gray);
+  overflow: auto;
+  resize: vertical;
+}
+
+.comment-form textarea {
+  background-color: var(--raisin-black-3);
+}
+
+.comment-form input:focus {
+  border: 3px solid var(--orange);
+  outline: none;
+}
 
 /* ----------- footer ---------- */
 #footer {

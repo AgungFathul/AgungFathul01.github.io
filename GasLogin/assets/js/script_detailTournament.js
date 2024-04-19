@@ -49,7 +49,6 @@ if (tournamentId) {
 }
 
 // pop up
-// Tambahkan di dalam file script_detailTournament.js
 const modal = document.getElementById("regist-tour");
 const btn = document.querySelector(".reg-button");
 const span = document.getElementsByClassName("close-button")[0];

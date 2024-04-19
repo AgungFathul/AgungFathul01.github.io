@@ -157,7 +157,7 @@ h6 {
   margin: 46px 0px 0px var(--section-padding);
 }
 
-.infodasar input[type="text"],
+input[type="text"],
 input[type="date"] {
   width: 349px;
   height: 48px;

@@ -368,17 +368,17 @@ input[type="date"] {
 .hadiah,
 .faq,
 .sponsor,
-.konfirmasi {
+.konfirmasi{
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .konfirmasi {
   justify-content: space-between;
 }
 
-.hadiah button,
-.faq button,
-.sponsor button {
+.detailturnamen button {
   transition: var(--transition-1);
   display: block;
   width: 206px;
@@ -391,12 +391,65 @@ input[type="date"] {
   font-size: 16px;
 }
 
-.hadiah button:hover,
-.faq button:hover,
-.sponsor button:hover {
+.detailturnamen button:hover {
   transition: var(--transition-1);
   background-color: var(--orange);
   color: var(--white);
+}
+
+.hadiahinput,
+.faqinput,
+.sponsorinput {
+  display: none;
+  width: calc(20% - 32px);
+  height: fit-content;
+  border: 1px solid var(--platinum);
+  border-radius: 10px;
+  margin: 1rem 16px 1rem 0;
+  padding: 16px;
+  float: left;
+}
+
+.hadiahinput:nth-child(4n + 1), .faqinput:nth-child(2n + 1), .sponsorinput:nth-child(3n + 1) {
+  clear: both;
+}
+
+.hadiahinputhead, .faqinputhead, .sponsorinputhead {
+  display: flex;
+  padding: 0px;
+  justify-content: space-between;
+}
+
+.hadiahinputhead .remove-button, .faqinputhead .remove-button, .sponsorinputhead .remove-button {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.hadiahinputhead .remove-button:hover, .faqinputhead .remove-button:hover, .sponsorinputhead .remove-button:hover {
+  transition: var(--transition-2);
+  color: var(--orange);
+  background-color: transparent;
+}
+
+
+.hadiahinput input[type="text"], .faqinput input[type="text"], .sponsorinput input[type="text"] {
+  width: calc(100% - 16px);
+  height: 2rem;
+}
+
+.faqinput {
+  width: calc(50% - 32px);
+}
+
+.sponsorinput {
+  width: calc(33.3% - 32px);
 }
 
 .detailturnamen textarea {

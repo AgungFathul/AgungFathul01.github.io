@@ -198,7 +198,7 @@ input[type="date"] {
   transition: var(--transition-1);
   display: block;
   width: 206px;
-  height: 80px;
+  height: 70px;
   margin: 12px 0px;
   padding: auto;
   background-color: var(--orange);
@@ -210,11 +210,11 @@ input[type="date"] {
 .infogame .gamelist {
   display: inline-flex;
   width: fit-content;
-  height: 320px;
+  height: fit-content;
   margin: 12px 0px 12px 58px;
   padding: 25px 0px 25px 58px;
   border: none;
-  border-left: 5px solid #000000;
+  border-left: 5px solid var(--light-gray);
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -236,6 +236,7 @@ input[type="date"] {
   width: 211px;
   height: 299px;
   object-fit: fill;
+  border-radius: 10px;
 }
 
 .deskripsi textarea {

@@ -308,6 +308,7 @@ body {
     font-size: 14px; /* Smaller text for better fit on smaller screens */
     margin-top: 60px; /* Adjusted margin */
     margin-bottom: 30px; /* Adjusted margin */
+    padding: 20px;
   }
 
   .content a {

@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (hiddenDiv) {
             hiddenDiv.style.display = 'block';
         } else {
-            alert("Maksimal 4 hadiah.");
+            alert("Maksimal 5 hadiah.");
         }
     
         const aturanH3 = document.querySelector('.detailturnamen h3');

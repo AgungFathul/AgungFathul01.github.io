@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
         parentDiv.style.display = 'none';
     }
 
-    document.querySelectorAll('.remove-button-sponsor').forEach(button => {
+    document.querySelectorAll('.remove-button').forEach(button => {
         button.addEventListener('click', function() {
             removeSponsorInput(this);
         });

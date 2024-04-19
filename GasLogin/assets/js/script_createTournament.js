@@ -1,5 +1,5 @@
-//script untuk menu gamelist
 document.addEventListener("DOMContentLoaded", function() {
+    // Fungsi dibawah sampai komentar berikutnya untuk merubah gambar gamelist sesuai dengan platform game yang dipilih
     var pcbutton = document.getElementById("pc");
     var mobilebutton = document.getElementById("mobile");
     var ps4button = document.getElementById("ps4");
@@ -52,89 +52,220 @@ document.addEventListener("DOMContentLoaded", function() {
             "./assets/images/smash.jpg"
         ]);
     });
-});
 
-// script untuk tampilan active platform button
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.querySelectorAll(".platformbutt");
+    // Fungsi dibawah sampai komentar berikutnya untuk merubah status aktif dari platform button
+    let platformButtons = document.querySelectorAll(".platformbutt");
 
-    buttons.forEach(function(button) {
+    platformButtons.forEach(function(button) {
         button.addEventListener("click", function() {
-            buttons.forEach(function(platformbutton) {
+            platformButtons.forEach(function(platformbutton) {
                 platformbutton.classList.remove("active");
             });
 
             this.classList.add("active");
         });
     });
-});
 
-// script untuk menu lokasi turnamen
- const offlineBtn = document.getElementById("offlinebtn");
- const onlineBtn = document.getElementById("onlinebtn");
- const hybridBtn = document.getElementById("hybridbtn");
- const namaTempatInputs = document.getElementsByClassName("namatempat");
- const lokasi1 = document.querySelector(".lokasi-line1");
- const lokasi2 = document.querySelector(".lokasi-line2");
- const detailAlamatInput = document.querySelector(".detailalamat");
- const detailAlamatHeader = document.querySelector(".detailalamat h6");
- const keteranganInput = document.getElementById("keterangan");
+    // Fungsi dibawah sampai komentar berikutnya untuk mengubah tampilan input lokasi turnamen sesuai dengan tipe lokasi yang dipilih
+    const offlineBtn = document.getElementById("offlinebtn");
+    const onlineBtn = document.getElementById("onlinebtn");
+    const hybridBtn = document.getElementById("hybridbtn");
+    const namaTempatInputs = document.getElementsByClassName("namatempat");
+    const lokasi1 = document.querySelector(".lokasi-line1");
+    const lokasi2 = document.querySelector(".lokasi-line2");
+    const detailAlamatInput = document.querySelector(".detailalamat");
+    const detailAlamatHeader = document.querySelector(".detailalamat h6");
+    const keteranganInput = document.getElementById("keterangan");
 
- function showInputBasedOnButton(buttonId) {
-    lokasi1.style.display = "none";
-    lokasi2.style.display = "none";
-    for (let input of namaTempatInputs) {
-      input.style.display = "none";
+    function showInputBasedOnButton(buttonId) {
+        lokasi1.style.display = "none";
+        lokasi2.style.display = "none";
+        for (let input of namaTempatInputs) {
+          input.style.display = "none";
+        }
+        detailAlamatInput.style.display = "none";
+        keteranganInput.style.display = "none";
+
+        if (buttonId === "offlinebtn") {
+            lokasi1.style.display = "flex";
+            lokasi2.style.display = "flex";
+            for (let input of namaTempatInputs) {
+                input.style.display = "block";
+            }
+            detailAlamatInput.style.display = "block";
+            detailAlamatHeader.textContent = "Detail Alamat";
+            keteranganInput.style.display = "block";
+            keteranganInput.setAttribute("placeholder", "Detail alamat");
+        } else if (buttonId === "onlinebtn") {
+            detailAlamatInput.style.display = "block";
+            detailAlamatHeader.textContent = "Silahkan lanjut ke langkah berikutnya";
+            keteranganInput.style.display = "none";
+        } else if (buttonId === "hybridbtn") {
+            lokasi1.style.display = "flex";
+            lokasi2.style.display = "flex";
+            for (let input of namaTempatInputs) {
+                input.style.display = "block";
+            }
+            detailAlamatInput.style.display = "block";
+            detailAlamatHeader.textContent = "Keterangan Hybrid";
+            keteranganInput.style.display = "block";
+            keteranganInput.setAttribute("placeholder", "Keterangan untuk turnamen hybrid");
+        }
     }
-    detailAlamatInput.style.display = "none";
-    keteranganInput.style.display = "none";
 
-    if (buttonId === "offlinebtn") {
-      lokasi1.style.display = "flex";
-      lokasi2.style.display = "flex";
-      for (let input of namaTempatInputs) {
-        input.style.display = "block";
-      }
-      detailAlamatInput.style.display = "block";
-      detailAlamatHeader.textContent = "Detail Alamat";
-      keteranganInput.style.display = "block";
-      keteranganInput.setAttribute("placeholder", "Detail alamat");
-    } else if (buttonId === "onlinebtn") {
-      detailAlamatInput.style.display = "block";
-      detailAlamatHeader.textContent = "Silahkan lanjut ke langkah berikutnya";
-      keteranganInput.style.display = "none";
-    } else if (buttonId === "hybridbtn") {
-      lokasi1.style.display = "flex";
-      lokasi2.style.display = "flex";
-      for (let input of namaTempatInputs) {
-        input.style.display = "block";
-      }
-      detailAlamatInput.style.display = "block";
-      detailAlamatHeader.textContent = "Keterangan Hybrid";
-      keteranganInput.style.display = "block";
-      keteranganInput.setAttribute("placeholder", "Keterangan untuk turnamen hybrid");
+    offlineBtn.addEventListener("click", () => showInputBasedOnButton("offlinebtn"));
+    onlineBtn.addEventListener("click", () => showInputBasedOnButton("onlinebtn"));
+    hybridBtn.addEventListener("click", () => showInputBasedOnButton("hybridbtn"));
+
+    window.addEventListener("load", function() {
+        showInputBasedOnButton("offlinebtn");
+    });
+
+    // Fungsi dibawah sampai komentar berikutnya untuk memunculkan dan menghilangkan hadiahinput
+    function toggleHadiahDiv() {
+        const divs = document.querySelectorAll('.hadiahinput');
+        const hiddenDiv = Array.from(divs).find(div => window.getComputedStyle(div).display === 'none');
+    
+        if (hiddenDiv) {
+            hiddenDiv.style.display = 'block';
+        } else {
+            alert("Maksimal 4 hadiah.");
+        }
+    
+        const aturanH3 = document.querySelector('.detailturnamen h3');
+        const allHidden = [...divs].every(div => window.getComputedStyle(div).display === 'none');
+    
+        if (allHidden) {
+            aturanH3.style.marginBottom = '0';
+        } else {
+            aturanH3.style.marginBottom = '';
+        }
     }
- }
+    
+    document.getElementById('toggle-hadiah-button').addEventListener('click', toggleHadiahDiv);
+    
+    function removeHadiahInput(button) {
+        const parentDiv = button.closest('.hadiahinput');
+        parentDiv.style.display = 'none';
+    }
+    
+    document.querySelectorAll('.remove-button').forEach(button => {
+        button.addEventListener('click', function() {
+            removeHadiahInput(this);
+        });
+    }); 
 
- offlineBtn.addEventListener("click", () => showInputBasedOnButton("offlinebtn"));
- onlineBtn.addEventListener("click", () => showInputBasedOnButton("onlinebtn"));
- hybridBtn.addEventListener("click", () => showInputBasedOnButton("hybridbtn"));
+    // Fungsi dibawah sampai komentar berikutnya untuk mengubah warna border input teks Hadiah saat fokus atau blur
+    const inputHadiahTexts = document.querySelectorAll('.hadiahinput input[type="text"]');
 
- window.addEventListener("load", function() {
-    showInputBasedOnButton("offlinebtn");
-});
+    inputHadiahTexts.forEach(input => {
+        input.addEventListener('focus', function() {
+            const parentHadiahInput = this.closest('.hadiahinput');
+            parentHadiahInput.style.borderColor = 'var(--orange)';
+        });
 
-// script untuk lokasi button
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.querySelectorAll(".lokasi-buttons");
-
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            buttons.forEach(function(lokasibuttons) {
-                lokasibuttons.classList.remove("active");
-            });
-
-            this.classList.add("active");
+        input.addEventListener('blur', function() {
+            const parentHadiahInput = this.closest('.hadiahinput');
+            parentHadiahInput.style.borderColor = '';
         });
     });
+
+    // Fungsi dibawah sampai komentar berikutnya untuk memunculkan dan menghilangkan faqinput
+    function toggleFaqDiv() {
+        const divs = document.querySelectorAll('.faqinput');
+        const hiddenDiv = Array.from(divs).find(div => window.getComputedStyle(div).display === 'none');
+    
+        if (hiddenDiv) {
+            hiddenDiv.style.display = 'block';
+        } else {
+            alert("Maksimal 3 faq");
+        }
+    
+        const aturanH3 = document.querySelector('.detailturnamen h3');
+        const allHidden = [...divs].every(div => window.getComputedStyle(div).display === 'none');
+    
+        if (allHidden) {
+            aturanH3.style.marginBottom = '0';
+        } else {
+            aturanH3.style.marginBottom = '';
+        }
+    }
+    
+    document.getElementById('toggle-faq-button').addEventListener('click', toggleFaqDiv);
+    
+    function removeFaqInput(button) {
+        const parentDiv = button.closest('.faqinput');
+        parentDiv.style.display = 'none';
+    }
+    
+    document.querySelectorAll('.remove-button').forEach(button => {
+        button.addEventListener('click', function() {
+            removeFaqInput(this);
+        });
+    }); 
+
+    // Fungsi dibawah sampai komentar berikutnya untuk mengubah warna border input teks Faq saat fokus atau blur
+    const inputFaqTexts = document.querySelectorAll('.faqinput input[type="text"]');
+
+    inputFaqTexts.forEach(input => {
+        input.addEventListener('focus', function() {
+            const parentFaqInput = this.closest('.faqinput');
+            parentFaqInput.style.borderColor = 'var(--orange)';
+        });
+
+        input.addEventListener('blur', function() {
+            const parentFaqInput = this.closest('.faqinput');
+            parentFaqInput.style.borderColor = '';
+        });
+    });
+
+    // Fungsi dibawah sampai komentar berikutnya untuk memunculkan dan menghilangkan sponsorinput
+    function toggleSponsorDiv() {
+        const divs = document.querySelectorAll('.sponsorinput');
+        const hiddenDiv = Array.from(divs).find(div => window.getComputedStyle(div).display === 'none');
+
+        if (hiddenDiv) {
+            hiddenDiv.style.display = 'block';
+        } else {
+            alert("Maksimal 3 sponsor.");
+        }
+
+        const aturanH3 = document.querySelector('.detailturnamen h3');
+        const allHidden = [...divs].every(div => window.getComputedStyle(div).display === 'none');
+
+        if (allHidden) {
+            aturanH3.style.marginBottom = '0';
+        } else {
+            aturanH3.style.marginBottom = '';
+        }
+    }
+
+    document.getElementById('toggle-sponsor-button').addEventListener('click', toggleSponsorDiv);
+
+    function removeSponsorInput(button) {
+        const parentDiv = button.closest('.sponsorinput');
+        parentDiv.style.display = 'none';
+    }
+
+    document.querySelectorAll('.remove-button-sponsor').forEach(button => {
+        button.addEventListener('click', function() {
+            removeSponsorInput(this);
+        });
+    });
+
+    // Fungsi dibawah sampai komentar berikutnya untuk mengubah warna border input teks Sponsor saat fokus atau blur
+    const inputSponsorTexts = document.querySelectorAll('.sponsorinput input[type="text"]');
+
+    inputSponsorTexts.forEach(input => {
+        input.addEventListener('focus', function() {
+            const parentSponsorInput = this.closest('.sponsorinput');
+            parentSponsorInput.style.borderColor = 'var(--orange)';
+        });
+
+        input.addEventListener('blur', function() {
+            const parentSponsorInput = this.closest('.sponsorinput');
+            parentSponsorInput.style.borderColor = '';
+        });
+    });
+    
 });

@@ -106,12 +106,20 @@
     </div>
   </header>
 
+  <!-- 
+    - MAIN  SECTION 
+   -->
     <main>
+
+      <!-- 
+        POP UP DAFTAR TOUR
+       -->
       <div class="modal" id="regist-tour">
         <div class="modal-content">
           <span class="close-button">&times;</span>
           <h2>JOIN TOURNAMENT</h2>
           <form>
+
             <!-- Form fields untuk pendaftaran -->
             <label for="team-name">Name of team</label>
             <input type="text" id="team-name" required />
@@ -128,8 +136,6 @@
                 <input type="text" id="game-id" required />
                 </div>
               </div>
-              
-              
             </div>
             
             <div class="reg-member-card">
@@ -168,7 +174,7 @@
       </div>
 
       <!--  Awal Card Tour -->
-      <div class="tour-header">
+      <div class="tour-card">
         <div class="tour-bg" data-tournament-id="T3"></div>
         <div class="tour-info-container">
           <div class="tour-information">
@@ -192,7 +198,7 @@
             </ul>
           </div>
           <div class="reg-tour">
-            <!-- Button trigger modal -->
+            <!-- Button trigger popup -->
             <button class="reg-button" data-target="#regist-tour">DAFTAR</button>
             <p>(OPEN) 0/32 TEAMS REGISTED</p>
           </div>
@@ -214,6 +220,9 @@
             <button class="tab-btn" data-target="#standings">STANDINGS</button>
           </div>
 
+          <!-- 
+            ISIAN TAB
+           -->
           <div class="content-box">
             <!-- OVERVIEW -->
             <div class="content active" id="overview">
@@ -361,13 +370,15 @@
             </div>
             <div class="content" id="standings">
               <h2>Standings not ready yet.</h2>
-              
             </div>
           </div>
         </div>
       </div>
     </main>
 
+    <!-- 
+      FOOTER
+     -->
     <footer>
       <div class="footer-bottom">
         <div class="container">
@@ -386,9 +397,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <script src="./assets/js/script_detailTournament.js">
-     
-    </script>
+    <script src="./assets/js/script_detailTournament.js"></script>
   </body>
 </html>

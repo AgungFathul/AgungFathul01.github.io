@@ -4,17 +4,18 @@
   box-sizing: border-box;
 }
 
-html {
-  behavior: smooth;
-}
-
 body {
   background: url("../images/section-wrapper-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.tour-header {
+/*
+    ==================
+    tour card/banner
+    ==================
+  */
+.tour-card {
   margin-top: 60px;
   background-repeat: no-repeat;
   width: 100%;
@@ -81,15 +82,12 @@ h4 {
   color: var(--white);
 }
 
+/* regist button on banner */
 .reg-tour {
   max-width: fit-content;
   margin-top: 150px;
   padding: 20px 70px 0px 0px;
   z-index: 1;
-}
-
-.reg-tour .reg-button {
-  margin: auto;
 }
 
 .reg-tour p {
@@ -101,6 +99,8 @@ h4 {
 .reg-button,
 .end-button {
   margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
   width: 190px;
   height: 50px;
   color: var(--white);
@@ -125,6 +125,7 @@ h4 {
   color: var(--raisin-black-1);
 }
 
+/* popup for regist button */
 .modal {
   display: none;
   margin-top: 100px;
@@ -213,7 +214,6 @@ h4 {
   width: 48%;
   max-width: 48%;
   padding: 10px;
-  /* border: 0.5px solid rgba(255, 134, 5, 0.5); */
   color: var(--white);
   margin: 5px;
   font-weight: bold;
@@ -235,6 +235,11 @@ h4 {
   outline: none;
 }
 
+/* 
+  ======================
+    style for TAB
+  ======================
+*/
 button .tab-container {
   width: 100%;
   display: flex;
@@ -329,6 +334,7 @@ button .tab-container {
   display: block;
 }
 
+/* animation for transition each tab */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -503,32 +509,13 @@ table tbody tr:last-child th {
   min-width: fit-content;
 }
 
-/* FORM REG */
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  z-index: 1000;
-  max-width: 300px;
-}
+/* 
+  *************
+  RESPONISIVE
+  *************
+*/
 
-.register-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.register-form label {
-  margin-bottom: 5px;
-}
-
-.register-form input[type="text"] {
-  margin-bottom: 10px;
-}
-
+/* untuk MAX-width */
 @media screen and (max-width: 650px) {
   .modal {
     margin-top: 150px;
@@ -548,38 +535,6 @@ table tbody tr:last-child th {
   .capt-id {
     width: 100%;
     margin: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .tour-information {
-    margin-top: 150px;
-    max-width: 50%;
-  }
-
-  .detail-standings {
-    width: 80%;
-  }
-
-  .modal-content {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 850px) {
-  .modal-content {
-    width: 75%;
-  }
-}
-@media screen and (min-width: 920px) {
-  .modal-content {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 1020px) {
-  .modal-content {
-    width: 60%;
-    margin-top: 100px;
   }
 }
 
@@ -611,62 +566,6 @@ table tbody tr:last-child th {
   .reg-button {
     margin: 0;
     padding: 0;
-  }
-}
-
-@media screen and (max-height: 450px) {
-  .tour-header {
-    height: 180vh;
-    overflow: hidden;
-  }
-
-  .tour-bg {
-    max-height: 180vh;
-    overflow: hidden;
-  }
-}
-@media screen and (max-height: 570px) {
-  .tour-header {
-    height: 120vh;
-    overflow: hidden;
-  }
-
-  .tour-bg {
-    max-height: 120vh;
-    overflow: hidden;
-  }
-}
-@media screen and (min-height: 700px) {
-  .tour-header {
-    height: 80vh;
-    overflow: hidden;
-  }
-
-  .tour-bg {
-    max-height: 80vh;
-    overflow: hidden;
-  }
-}
-@media screen and (min-height: 850px) {
-  .tour-header {
-    height: 70vh;
-    overflow: hidden;
-  }
-
-  .tour-bg {
-    max-height: 70vh;
-    overflow: hidden;
-  }
-}
-@media screen and (min-height: 950px) {
-  .tour-header {
-    height: 60vh;
-    overflow: hidden;
-  }
-
-  .tour-bg {
-    max-height: 60vh;
-    overflow: hidden;
   }
 }
 
@@ -719,5 +618,99 @@ table tbody tr:last-child th {
 
   .box-large h2 {
     font-size: medium;
+  }
+}
+
+/* untuk MIN-width */
+@media screen and (min-width: 768px) {
+  .tour-information {
+    margin-top: 150px;
+    max-width: 50%;
+  }
+
+  .detail-standings {
+    width: 80%;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .modal-content {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 920px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .modal-content {
+    width: 60%;
+    margin-top: 100px;
+  }
+}
+
+/* untuk MAX  - height */
+@media screen and (max-height: 450px) {
+  .tour-header {
+    height: 180vh;
+    overflow: hidden;
+  }
+
+  .tour-bg {
+    max-height: 180vh;
+    overflow: hidden;
+  }
+}
+@media screen and (max-height: 570px) {
+  .tour-header {
+    height: 120vh;
+    overflow: hidden;
+  }
+
+  .tour-bg {
+    max-height: 120vh;
+    overflow: hidden;
+  }
+}
+
+/* untuk MIN-height */
+@media screen and (min-height: 700px) {
+  .tour-header {
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .tour-bg {
+    max-height: 80vh;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-height: 850px) {
+  .tour-header {
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .tour-bg {
+    max-height: 70vh;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-height: 950px) {
+  .tour-header {
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  .tour-bg {
+    max-height: 60vh;
+    overflow: hidden;
   }
 }

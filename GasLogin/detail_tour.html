@@ -106,8 +106,12 @@
       </div>
     </header>
 
+    <!-- 
+    - MAIN  SECTION 
+   -->
     <main>
-      <div class="tour-header">
+
+      <div class="tour-card">
         <div class="tour-bg" data-tournament-id="1"></div>
         <div class="tour-info-container">
           <div class="tour-information">
@@ -132,7 +136,7 @@
             </ul>
           </div>
           <div class="reg-tour">
-            <!-- Button trigger modal -->
+            <!-- Button trigger popup -->
             <button class="end-button">DAFTAR</button>
             <p>(CLOSE) 16/16 TEAMS REGISTED</p>
           </div>
@@ -154,6 +158,9 @@
             <button class="tab-btn" data-target="#standings">STANDINGS</button>
           </div>
 
+          <!-- 
+            ISIAN TAB
+           -->
           <div class="content-box">
             <!-- OVERVIEW -->
             <div class="content active" id="overview">
@@ -301,6 +308,8 @@
                 allowtransparency="true"
               ></iframe>
             </div>
+
+            <!-- LIVE -->
             <div class="content" id="live">
               <h2>Live</h2>
               <iframe
@@ -314,6 +323,8 @@
                 allowfullscreen
               ></iframe>
             </div>
+
+            <!-- STANDING -->
             <div class="content" id="standings">
               <h2>Standings</h2>
               <div class="detail-standings">
@@ -396,6 +407,9 @@
       </div>
     </main>
 
+    <!-- 
+      FOOTER
+     -->
     <footer>
       <div class="footer-bottom">
         <div class="container">
@@ -414,9 +428,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <script src="./assets/js/script_detailTournament.js">
-     
-    </script>
+    <script src="./assets/js/script_detailTournament.js"></script>
   </body>
 </html>

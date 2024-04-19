@@ -168,6 +168,9 @@ body.active {
   padding-inline: 15px;
 }
 
+.site-main {
+  margin-top: 30vh;
+}
 .h1 {
   color: var(--white);
   font-family: var(--ff-refault);

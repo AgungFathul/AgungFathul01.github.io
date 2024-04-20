@@ -29,12 +29,27 @@ Ionicon
 ## Colors
 
 ```css
---light: #f8f9fa;
---secondary: #adb5bd;
---dark: #343a40;
---primary-color: #f15bb5;
---secondary-color: #2ec4b6;
---border: #e9ecef;
+--bright-yellow-crayola: hsl(40, 100%, 50%);
+--medium-turquoise: hsl(172, 48%, 59%);
+--silver-chalice: hsl(0, 0%, 70%);
+--eerie-black-1: hsl(0, 0%, 13%);
+--white: hsl(0, 0%, 15%);
+--eerie-black-3: hsl(228, 10%, 10%);
+--raisin-black: hsl(220, 8%, 14%);
+--granite-gray: hsl(0, 0%, 38%);
+--sonic-silver: hsl(0, 0%, 47%);
+--orange_50: hsla(86, 45%, 54%, 0.5);
+--baby-powder: hsl(86, 41%, 97%);
+--light-gray: hsl(0, 0%, 80%);
+--orange: hsl(86, 45%, 54%);
+--platinum: hsl(0, 0%, 91%);
+--cultured: hsl(0, 0%, 94%);
+--white-60: hsla(0, 0%, 100%, 0.6);
+--white_50: hsla(0, 0%, 100%, 0.5);
+--white_10: hsla(0, 0%, 100%, 0.1);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--jet: hsl(0, 0%, 18%);
 --raisin-black-1: hsl(0, 0%, 0%);
 --raisin-black-2: hsl(231, 12%, 12%);
 --raisin-black-3: hsl(228, 12%, 17%);
@@ -72,6 +87,7 @@ Ionicon
 --fs-9: 14px;
 --fs-10: 13px;
 --fs-11: 12px;
+vh20
 ```
 
 ### Font Weight
@@ -128,3 +144,11 @@ partner
 game
 donation
 event
+
+about:
+visi-misi
+feature
+
+tournament:
+hero
+tournamentgame

@@ -122,18 +122,18 @@
 
             <!-- Form fields untuk pendaftaran -->
             <label for="team-name">Name of team</label>
-            <input type="text" id="team-name" required />
+            <input type="text" id="team-name"  />
             <div class="captain-info">
               <p>Captain</p>
               <small>Note: Game ID should be in format "12345678 - 1234"</small>
               <div class="capt-card">
                 <div class="capt-uname">
                   <label for="captain-name">Username</label>
-                  <input type="text" id="captain-name" required />
+                  <input type="text" id="captain-name"  />
                 </div>
                 <div class="capt-id">
                   <label for="game-id">Game ID - Server</label>
-                <input type="text" id="game-id" required />
+                <input type="text" id="game-id"  />
                 </div>
               </div>
             </div>
@@ -146,29 +146,25 @@
                 <label for="game-id">Game ID - Server</label>
                 <input type="text" id="game-id" />
               </div>
+
               <div class="reg-member-info">
-                <p>Member 2</p>
+                <p>Member 1</p>
                 <label for="member-name">Username</label>
-                <input type="text" id="member-name"  />
+                <input type="text" id="member-name" />
                 <label for="game-id">Game ID - Server</label>
                 <input type="text" id="game-id" />
               </div>
+
               <div class="reg-member-info">
-                <p>Member 3</p>
+                <p>Member 1</p>
                 <label for="member-name">Username</label>
-                <input type="text" id="member-name"  />
-                <label for="game-id">Game ID - Server</label>
-                <input type="text" id="game-id"  />
-              </div>
-              <div class="reg-member-info">
-                <p>Member 4</p>
-                <label for="member-name">Username</label>
-                <input type="text" id="member-name"  />
+                <input type="text" id="member-name" />
                 <label for="game-id">Game ID - Server</label>
                 <input type="text" id="game-id" />
               </div>
+
             </div>
-            <button type="submit" class="submit-button">Daftar</button>
+            <button type="submit" class="submit-button">tambahkan</button>
           </form>
         </div>
       </div>
@@ -188,7 +184,7 @@
                 <ion-icon name="alarm" class="icon"></ion-icon> 20:00 WIB - Selesai
               </li>
               <li>
-                <ion-icon name="people-circle" class="icon"></ion-icon> 32 Teams
+                <ion-icon name="people-circle" class="icon"></ion-icon> 3 Teams
               </li>
               <li><ion-icon name="pricetags" class="icon"></ion-icon>PAID</li>
               <li>
@@ -200,7 +196,7 @@
           <div class="reg-tour">
             <!-- Button trigger popup -->
             <button class="reg-button" data-target="#regist-tour">DAFTAR</button>
-            <p>(OPEN) 0/32 TEAMS REGISTED</p>
+            <p>(OPEN) 0/3 TEAMS REGISTED</p>
           </div>
         </div>
       </div>
@@ -265,7 +261,7 @@
                         <ion-icon name="people"></ion-icon>
                       </div>
                       <span class="desc-1">Teams</span>
-                      <span class="desc-2">0/32</span>
+                      <span class="desc-team">0/3</span>
                     </div>
                     <div class="box-small">
                       <div class="overview-icon">
@@ -388,6 +384,59 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const registerButton = document.querySelector('.reg-button');
+        const modal = document.querySelector('#regist-tour');
+        const closeButton = modal.querySelector('.close-button');
+        const submitButton = modal.querySelector('.submit-button');
+        const statusText = document.querySelector('.reg-tour p');
+        const statusText2 = document.querySelector('.desc-team')
+    
+        let teamCount = 0;
+    
+        function showModal() {
+          modal.style.display = 'block';
+        }
+  
+        function closeModal() {
+          modal.style.display = 'none';
+        }
+
+        function updateStatus() {
+          if (teamCount === 0) {
+            statusText.textContent = "(OPEN) 0/3 TEAMS REGISTERED";
+            registerButton.textContent = "DAFTAR";
+            
+            registerButton.disabled = false; 
+          } else if (teamCount >= 3) {
+            statusText.textContent = "(CLOSED) 3/3 TEAMS REGISTERED";
+            registerButton.textContent = "SELESAI";
+            registerButton.disabled = true; 
+          } else {
+            statusText.textContent = `(OPEN) ${teamCount}/3 TEAMS REGISTERED`;
+            registerButton.disabled = false; 
+          }
+        }
+
+
+        registerButton.addEventListener('click', showModal);
+    
+
+        closeButton.addEventListener('click', closeModal);
+    
+
+        submitButton.addEventListener('click', function(event) {
+          event.preventDefault(); 
+          teamCount++;
+          updateStatus();
+          closeModal();
+        });
+        updateStatus();
+      });
+    </script>
+    
+    
     <script src="./assets/js/script.js"></script>
     <script
       type="module"

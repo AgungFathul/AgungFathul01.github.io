@@ -13,7 +13,6 @@ const navElemArr = [navOpenBtn, navCloseBtn, overlay];
 
 for (let i = 0; i < navElemArr.length; i++) {
   navElemArr[i].addEventListener("click", function () {
-    console.log("event clicked:", navElemArr[i]);
     elemToggleFunc(navbar);
     elemToggleFunc(overlay);
     elemToggleFunc(document.body);

@@ -536,9 +536,7 @@ body.active {
   #FOOTER
 \*-----------------------------------*/
 footer {
-  background-color: #222;
   color: #ccc;
-  font-family: 'Poppins', sans-serif;
   padding: 20px 0;
   font-size: 14px;
 }

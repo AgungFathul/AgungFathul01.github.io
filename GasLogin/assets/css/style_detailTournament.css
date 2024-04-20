@@ -463,6 +463,10 @@ button .tab-container {
   margin-bottom: 5px;
 }
 
+.iframe-map {
+  max-width: 100%;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

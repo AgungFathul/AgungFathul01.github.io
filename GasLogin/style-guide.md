@@ -29,7 +29,13 @@ Ionicon
 ## Colors
 
 ```css
---raisin-black-1: hsl(234, 14%, 14%);
+--light: #f8f9fa;
+--secondary: #adb5bd;
+--dark: #343a40;
+--primary-color: #f15bb5;
+--secondary-color: #2ec4b6;
+--border: #e9ecef;
+--raisin-black-1: hsl(0, 0%, 0%);
 --raisin-black-2: hsl(231, 12%, 12%);
 --raisin-black-3: hsl(228, 12%, 17%);
 --eerie-black: hsl(240, 11%, 9%);
@@ -37,6 +43,7 @@ Ionicon
 --platinum: hsl(0, 4%, 91%);
 --xiketic: hsl(275, 24%, 10%);
 --orange: hsl(31, 100%, 51%);
+--purple: hsl(274.63deg 100% 30.31%);
 --white: hsl(0, 0%, 100%);
 --onyx: hsl(240, 5%, 26%);
 ```

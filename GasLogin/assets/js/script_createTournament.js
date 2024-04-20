@@ -281,5 +281,20 @@ document.addEventListener("DOMContentLoaded", function() {
             parentSponsorInput.style.borderColor = '';
         });
     });
-    
+
+    // Fungsi dibawah sampai komentar berikutnya untuk menampilkan file logo sponsor yang telah diupload
+    function displayFileName(input) {
+        const span = input.parentNode.querySelector('.file-name');
+        if (input.files.length > 0) {
+            span.textContent = input.files[0].name;
+        } else {
+            span.textContent = '';
+        }
+    }
+
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+        input.addEventListener('change', function() {
+        displayFileName(this);
+        });
+    });
 });

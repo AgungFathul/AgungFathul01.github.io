@@ -116,7 +116,8 @@ h6 {
 
 .infogame button,
 .detailturnamen button,
-.lokasibuttons {
+.lokasibuttons,
+input[type="file"] {
   font-family: var(--ff-poppins);
   font-weight: bold;
 }
@@ -172,6 +173,10 @@ input[type="date"] {
   margin-bottom: 0.5rem;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 .infogame {
   display: block;
   width: 100%;
@@ -184,7 +189,7 @@ input[type="date"] {
 
 .infogame h3 {
   display: inline-block;
-  margin-right: 192px;
+  margin-right: 126px;
 }
 
 .infogame-container {
@@ -200,8 +205,8 @@ input[type="date"] {
 .platformbutton {
   transition: var(--transition-1);
   display: block;
-  width: 206px;
-  height: 70px;
+  width: 120px;
+  height: 50px;
   margin: 12px 0px;
   padding: auto;
   background-color: var(--orange);
@@ -267,27 +272,27 @@ input[type="date"] {
   height: fit-content;
   background-color: var(--raisin-black-2);
   margin: 46px 0px 46px 0px;
-  padding: 38px;
+  padding: 60px;
   overflow: hidden;
 }
 
 .lokasi-container {
   display: flex;
   width: 100%;
+  flex-direction: column;
 }
 
 .lokasi-button {
   display: flex;
-  flex-direction: column;
-  margin-right: 61px;
+  flex-direction: row;
 }
 
 .lokasibuttons {
   transition: var(--transition-1);
   display: block;
-  width: 206px;
-  height: 80px;
-  margin: 12px 0px;
+  width: 120px;
+  height: 50px;
+  margin: 0 16px 0 0;
   padding: auto;
   background-color: var(--orange);
   color: var(--light-gray);
@@ -312,7 +317,7 @@ input[type="date"] {
 .lokasi-input {
   display: inline-flex;
   flex-direction: column;
-  width: 150vh;
+  width: 100%;
   height: fit-content;
   margin: 12px 0px 12px 0px;
   padding: 25px 58px;
@@ -351,7 +356,7 @@ input[type="date"] {
 
 .detailalamat textarea {
   display: flex;
-  width: 96%;
+  width: 100%;
   height: 100px;
   padding: 16px;
   background-color: var(--raisin-black-3);
@@ -379,14 +384,14 @@ input[type="date"] {
 }
 
 .konfirmasi {
-  justify-content: space-between;
+  justify-content: right;
 }
 
 .detailturnamen button {
   transition: var(--transition-1);
   display: block;
-  width: 206px;
-  height: 80px;
+  width: 186px;
+  height: 50px;
   margin: 12px 0px;
   padding: auto;
   background-color: var(--light-gray);
@@ -456,6 +461,33 @@ input[type="date"] {
   width: calc(33.3% - 32px);
 }
 
+.sponsorinput input[type="text"] {
+  margin-bottom: 0.5rem;
+}
+
+.uploadlogo {
+  margin-top: 8px;
+}
+
+.sponsorinput input[type="file"] {
+  display: none;
+  margin-top: 8px;
+}
+
+.customuploadbutton {
+  height: 3rem;
+  padding: 6px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--light-gray);
+}
+
+.file-name {
+  color: var(--light-gray);
+  margin: 8px 0;
+}
+
 .detailturnamen textarea {
   width: 96%;
   height: 422px;
@@ -479,15 +511,15 @@ input[type="date"] {
 #selanjutnya,
 #simpansebagaidraft {
   display: block;
-  width: 35%;
-  height: 80px;
+  width: 20%;
+  height: 40px;
   margin: 32px 32px 32px 0px;
   padding: auto;
   border: none;
   border-radius: 20px;
   font-family: var(--ff-oswald);
   font-weight: bold;
-  font-size: 30px;
+  font-size: var(--fs-5);
   color: var(--white);
 }
 

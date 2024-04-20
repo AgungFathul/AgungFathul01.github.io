@@ -121,6 +121,20 @@ document.addEventListener("DOMContentLoaded", function() {
         showInputBasedOnButton("offlinebtn");
     });
 
+    // Fungsi dibawah sampai komentar berikutnya untuk merubah status aktif dari lokasi button
+    let lokasiButtons = document.querySelectorAll(".lokasibuttons");
+
+    lokasiButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            lokasiButtons.forEach(function(lokasibutton) {
+                lokasibutton.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        });
+    });
+
+
     // Fungsi dibawah sampai komentar berikutnya untuk memunculkan dan menghilangkan hadiahinput
     function toggleHadiahDiv() {
         const divs = document.querySelectorAll('.hadiahinput');

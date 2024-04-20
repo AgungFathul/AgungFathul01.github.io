@@ -235,28 +235,6 @@ a {
   outline: none;
 }
 
-/* ----------- footer ---------- */
-#footer {
-  padding-top: 4em;
-}
-
-#footer .feature-post .flex-item {
-  margin-bottom: 10px;
-}
-
-#footer .tags a {
-  border-radius: 40px;
-  padding: 10px 20px;
-  font-size: 15px;
-}
-
-#footer .copyrights {
-  padding: 10px 0;
-  border-top: 2px solid var(--light);
-}
-
-/* ----------- .footer ---------- */
-
 /* ----------- article page ------- */
 
 #post {
@@ -382,6 +360,7 @@ a {
 
   #site-main {
     margin-top: 14em;
+    display: grid;
   }
 }
 

@@ -179,7 +179,7 @@ body {
 
 .filter-section {
   position: relative; /* If not already set */
-  z-index: 20; /* Higher than other content if needed */
+  z-index: 1;
   padding: 20px 0;
 }
 

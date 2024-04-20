@@ -180,7 +180,6 @@ body {
 .filter-section {
   position: relative; /* If not already set */
   z-index: 20; /* Higher than other content if needed */
-  background: hsl(228, 12%, 17%); /* Semi-transparent background */
   padding: 20px 0;
 }
 
@@ -205,6 +204,21 @@ body {
   user-select: none;
   margin-right: 6px; /* Space between buttons */
 }
+
+.event-dropdown {
+  background-color: hsl(228, 12%, 17%);
+  color: white;
+  border: 1px solid hsl(31, 100%, 51%);
+  padding: 8px 12px;
+  border-radius: 5px;
+  width: auto;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-left: 45px;
+}
+
+
+
 
 /* Hover and active styles */
 .filter-button:hover,

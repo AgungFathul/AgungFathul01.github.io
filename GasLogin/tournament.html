@@ -170,42 +170,15 @@
       </section>
 
       <!-- Event -->
-      <section class="tournament_event">
-        <div class="text_tournament">
-          <h2>Event</h2>
-        </div>
-        <div class="filter-buttons">
-          <div
-            class="filter-button"
-            role="button"
-            tabindex="0"
-            data-filter="all"
-            onclick="filterCards('all')"
-          >
-            Semua
-          </div>
-          <div
-            class="filter-button"
-            data-filter="upcoming"
-            onclick="filterCards('upcoming')"
-          >
-            Mendatang
-          </div>
-          <div
-            class="filter-button"
-            data-filter="ongoing"
-            onclick="filterCards('ongoing')"
-          >
-            Berlangsung
-          </div>
-          <div
-            class="filter-button"
-            data-filter="completed"
-            onclick="filterCards('completed')"
-          >
-            Selesai
-          </div>
-        </div>
+      <div class="filter-section">
+        <select id="eventFilter" class="event-dropdown">
+            <option value="all">Semua</option>
+            <option value="upcoming">Mendatang</option>
+            <option value="ongoing">Berlangsung</option>
+            <option value="completed">Selesai</option>
+        </select>
+    </div>
+    
 
         <!-- Card Event -->
         <div class="card-container">

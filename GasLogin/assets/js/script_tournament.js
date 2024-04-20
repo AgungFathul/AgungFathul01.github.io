@@ -66,45 +66,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const noMatchMessage = document.createElement('p');
-    noMatchMessage.textContent = 'No events match your filter.';
-    noMatchMessage.style.display = 'none';
-    noMatchMessage.style.color = 'white'; 
-    document.querySelector('.card-container').appendChild(noMatchMessage);
-
+    // Mendefinisikan fungsi filterCards
     function filterCards(status) {
         let hasVisibleCards = false;
         const cards = document.querySelectorAll('.card');
         cards.forEach(card => {
             if (status === 'all' || card.getAttribute('data-status') === status) {
-                card.style.display = 'block'; // Mengubah tampilan kartu menjadi block
+                card.style.display = 'block';
                 hasVisibleCards = true;
             } else {
-                card.style.display = 'none'; // Sembunyikan kartu yang tidak cocok
+                card.style.display = 'none';
             }
         });
 
-        noMatchMessage.style.display = hasVisibleCards ? 'none' : 'block';
-        localStorage.setItem('currentFilter', status);
+        // Menampilkan atau menyembunyikan pesan tidak ada kecocokan
+        const noMatchMessage = document.querySelector('.no-match-message');
+        if (noMatchMessage) {
+            noMatchMessage.style.display = hasVisibleCards ? 'none' : 'block';
+        }
     }
 
-    // Update status button 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterCards(button.getAttribute('data-filter'));
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-        });
+    // Membuat pesan tidak ada kecocokan jika belum ada
+    let noMatchMessage = document.querySelector('.no-match-message');
+    if (!noMatchMessage) {
+        noMatchMessage = document.createElement('p');
+        noMatchMessage.className = 'no-match-message';
+        noMatchMessage.textContent = 'No events match your filter.';
+        noMatchMessage.style.display = 'none';
+        noMatchMessage.style.color = 'white'; 
+        document.querySelector('.card-container').appendChild(noMatchMessage);
+    }
 
-        
-        const savedFilter = localStorage.getItem('currentFilter') || 'all';
-        if (button.getAttribute('data-filter') === savedFilter) {
-            button.classList.add('active');
-            filterCards(savedFilter);
-        }
-    });
+    // Menangani perubahan pada dropdown filter
+    const eventFilterDropdown = document.getElementById('eventFilter');
+    if (eventFilterDropdown) {
+        eventFilterDropdown.addEventListener('change', function() {
+            filterCards(this.value);
+        });
+    }
 });
+
+
 
 
 
